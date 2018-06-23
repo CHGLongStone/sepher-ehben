@@ -1,0 +1,252 @@
+<html lang="en" >
+<head>
+	
+	<title>sepher ehben</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.4/svg.js"></script>
+
+	<!--
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.4/svg.min.js"></script>
+	<script src="/assets/scripts/nsts-svgmap.js"></script>
+	-->
+	<script src="assets/plugins/jquery.min.js"></script>
+	<script src="assets/scripts/svg-pan-zoom.js"></script>
+
+
+</head>
+<body>
+
+				<div id="notification" name="notification" class="form-group">
+				</div>
+<!--
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <polygon points="50 15, 100 100, 0 100"/>
+</svg>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script >
+		var draw = SVG('notification').size(1000, 400).attr({id:"svg_id"});
+		/**
+
+		
+		0,0	30* 	28.9006920332
+			90*		43.4194656807
+			60*		28.9006920332
+			90*		
+		
+		
+		
+		*/
+		var baseShape = {
+			"origin" : {
+				"x" : 0,
+				"y" : 0
+			},
+			"long": 43.419,
+			"short": 29.1034,
+			"lines": {
+				"A": {
+					"angle": -30,
+
+					"distance": 29.1034362232,
+				},
+				"B": {
+					"angle": -80,
+					"angle": -90,
+					"distance": 43.4194656807,
+				},
+				"C": {
+					"angle": -220,
+					"angle": -180,
+					"distance": 43.4194656807,
+				},
+				"D": {
+					"angle": 120,
+					"angle": -270,
+					"distance": 27.9006920332,
+				}
+				
+			}
+		};
+		
+		moveX = 100;
+		moveY = 100;
+		var box = draw.viewbox(200, 200, 200, 200);
+		var zoom = box.zoom;
+		var defs = draw.defs();
+		var pattern = defs.pattern()
+		pattern.attr({id:"grid", width:"100", height:"100", patternUnits:"userSpaceOnUse"});
+		pattern.rect().attr({width:"100", height:"100", fill:"none"});
+		pattern.path().attr({d:"M 100 0 L 0 0 0 100", fill:"none", stroke:"black", "stroke-width":"5"});
+		console.log('-------');
+
+		//draw.rect().attr({id:"grid_fill", width:"100%", height:"100%", fill:"url(#grid)"});
+		//draw.rect().attr({id:"grid_fill", width:worldXTotal, height:worldYTotal, fill:"url(#grid)"});
+		lineSpacing = 10;
+		fillStart = 606;
+		coursesIdx = 0;
+		startY = 0;
+		startX = 0;
+		//fillVal = {coursesIdx:fillStart};
+
+		grid_fill = SVG.get('grid_fill');
+		groupContainer = draw.group().attr({id:"groupContainer"});
+		/**
+		heightMapPath = "/assets/images/heightmap_"+data.result.data[Object.keys(data.result.data)[0]].world+".svg";
+		
+		groupContainer.image(heightMapPath,worldXTotal, worldYTotal).attr({ opacity: 0.6 }).back();//.rotate(270);
+		courseRotation = parseInt(value2.transform.rotation.z);
+		
+X=distance*cos(angle) +x0
+
+Y=distance*sin(angle) +y0
+
+		*/
+		
+		
+		group = groupContainer.group().attr({id:"abstraction"});
+		lastPosition = baseShape.origin;
+		i = 1;
+		while(parseInt(baseShape.long) > 10){
+			console.log('=============================');
+		
+			$.each(baseShape.lines, function( index, value ) {
+				console.log('');
+				console.log('index'+index);
+				console.log("value:"+JSON.stringify(value, null, 2));
+				var RadianAngle = (value.angle * Math.PI / 180)
+	
+				if(("B"|"C") == index){
+					distance = baseShape.long
+				}else{
+					distance = baseShape.short
+				
+				}
+					//x = value.distance * Math.cos(value.angle * Math.PI / 180);
+					x = distance * Math.cos(RadianAngle);
+					y = distance * Math.sin(RadianAngle);
+				console.log('RadianAngle '+RadianAngle);
+				//console.log('x'+x);
+				//console.log('y'+y);
+				
+				
+				var line = group.line().fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
+				plotVal = [
+					[parseFloat(lastPosition.x),parseFloat(lastPosition.y)], 
+					[parseFloat(x),parseFloat(y)]
+				];
+	
+				//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
+				
+				line.animate(1500).plot(plotVal);
+				
+				console.log("lastPosition:"+JSON.stringify(lastPosition, null, 2));
+				if('A' == index && 0 == lastPosition.x){
+					baseShape.lines["A"].angle = 40;
+				
+				}
+				lastPosition = {
+					"x" : x,
+					"y" : y,
+				};
+				//console.log("lastPosition:"+JSON.stringify(lastPosition, null, 2));
+				//baseShape.lines[index].distance = (parseFloat(baseShape.lines[index].distance) - lineSpacing);
+				console.log("baseShape.lines["+index+"]:"+JSON.stringify(baseShape.lines[index], null, 2));
+				if('A' == index ){
+					baseShape.long = (parseFloat(baseShape.long) - lineSpacing);
+					baseShape.short = (parseFloat(baseShape.long) - lineSpacing);
+					console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
+				
+				}
+				
+			});
+					i++;
+				console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
+				
+		}
+		//leftSightLine = group.line(moveX, moveY, (xPoint+moveX), (yPoint+moveY)).stroke({ width: 10 });
+		//var polyline = group.polyline([0,0, 25,14.5, 0,50, -25,14.75, -3.5,2]).animate().fill('none').stroke({ width: 1 });
+
+		
+		draw.size(1000, 1000);
+		boxSettings = box.attr('viewBox').split(" ");
+		//console.log('boxSettings'+JSON.stringify(boxSettings, null, 2));
+		viewSettings = moveX+' '+moveY+' '+boxSettings[2]+' '+boxSettings[3];
+		viewSettings = startX+' '+startY+' 100 100';
+
+		//box.attr({viewBox: viewSettings});
+		var line = group.polyline().fill('none').stroke({ width: 1 });
+		
+		//line.animate(1000).plot([[0,0], [25,14.5], [0,50], [-25,14.75], [-3.5,2]]).stroke({ width: 1 });
+		//line.animate(3000).plot([[0,0], [25,14.5], [0,50], [-25,14.75], [-3.5,2]]);
+		
+		
+		
+		$(function() {
+
+		  panZoomInstance = svgPanZoom('#svg_id', {
+			zoomEnabled: true,
+			controlIconsEnabled: true,
+			fit: true,
+			center: false,
+			minZoom: 0.001,
+			maxZoom: 800
+		  });
+		  
+		  // zoom out
+		  panZoomInstance.zoom(0.2)
+			
+		  $('#move').on('click', function() {
+			// Pan by any values from -80 to 80
+			panZoomInstance.panBy({x: Math.round(Math.random() * 160 - 80), y: Math.round(Math.random() * 160 - 80)})
+		  });
+		});
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<!-- 
+https://www.comsol.com/blogs/how-to-build-a-parameterized-archimedean-spiral-geometry/
+
+bisected equilateral 
+
+0	100
+100	100
+50	100
+75	57.5
+25	57.7
+50	72.75
+
+center points
+75	85.5
+25	85.5
+50	40
+
+-->
+
