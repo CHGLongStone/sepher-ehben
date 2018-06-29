@@ -40,7 +40,17 @@
 
 
 	<script >
-		var draw = SVG('notification').size(1000, 400).attr({id:"svg_id"});
+		var draw = SVG('notification').size(400, 400).attr({id:"svg_id"});
+		
+		var xtl = -200;
+		var ytl = 200;
+		var xbr = 200;
+		var ybr = -200;
+
+		
+	
+		var worldXTotal = Math.abs(xtl) + Math.abs(xbr);
+		var worldYTotal = Math.abs(ytl) + Math.abs(ybr); 		
 		/**
 
 		
@@ -54,30 +64,30 @@
 		*/
 		var baseShape = {
 			"origin" : {
-				"x" : 0,
-				"y" : 0
+				"x" : Math.abs(xtl),
+				"y" : Math.abs(ytl)
 			},
 			"long": 43.419,
 			"short": 29.1034,
 			"lines": {
 				"A": {
-					"angle": -30,
+					"angle": 0,
 
 					"distance": 29.1034362232,
 				},
 				"B": {
 					"angle": -80,
-					"angle": -90,
+					"angle": 90,
 					"distance": 43.4194656807,
 				},
 				"C": {
 					"angle": -220,
-					"angle": -180,
+					"angle": 210,
 					"distance": 43.4194656807,
 				},
 				"D": {
+					"angle": 320,
 					"angle": 120,
-					"angle": -270,
 					"distance": 27.9006920332,
 				}
 				
@@ -86,22 +96,22 @@
 		
 		moveX = 100;
 		moveY = 100;
-		var box = draw.viewbox(200, 200, 200, 200);
+		var box = draw.viewbox(Math.abs(xtl), Math.abs(ytl), 100, 100);
 		var zoom = box.zoom;
 		var defs = draw.defs();
 		var pattern = defs.pattern()
-		pattern.attr({id:"grid", width:"100", height:"100", patternUnits:"userSpaceOnUse"});
+		pattern.attr({id:"grid", width:"10", height:"10", patternUnits:"userSpaceOnUse"});
 		pattern.rect().attr({width:"100", height:"100", fill:"none"});
-		pattern.path().attr({d:"M 100 0 L 0 0 0 100", fill:"none", stroke:"black", "stroke-width":"5"});
+		pattern.path().attr({d:"M 100 0 L 0 0 0 100", fill:"none", stroke:"black", "stroke-width":"1"});
 		console.log('-------');
 
 		//draw.rect().attr({id:"grid_fill", width:"100%", height:"100%", fill:"url(#grid)"});
-		//draw.rect().attr({id:"grid_fill", width:worldXTotal, height:worldYTotal, fill:"url(#grid)"});
-		lineSpacing = 10;
+		draw.rect().attr({id:"grid_fill", width:worldXTotal, height:worldYTotal, fill:"url(#grid)"});
+		lineSpacing = 20;
 		fillStart = 606;
 		coursesIdx = 0;
-		startY = 0;
-		startX = 0;
+		startY = -50;
+		startX = -50;
 		//fillVal = {coursesIdx:fillStart};
 
 		grid_fill = SVG.get('grid_fill');
@@ -118,10 +128,29 @@ Y=distance*sin(angle) +y0
 
 		*/
 		
+		//draw.rect().attr({id:"grid_fill", width:500, height:500, fill:"url(#grid)"});
+		
 		
 		group = groupContainer.group().attr({id:"abstraction"});
 		lastPosition = baseShape.origin;
 		i = 1;
+		var line = [];
+		
+		moveX = -50 + Math.abs(xtl);
+		moveY = -50 + Math.abs(ytl);
+		var rect = group.rect(100, 100).fill('#f06').move(moveX, moveY);
+		var rectTL = group.rect(10, 10).fill('#f06').move(0, 0);
+		var rectBL = group.rect(10, 10).fill('#f06').move(390, 390);
+		
+		/**
+		plotVal = [
+			[parseFloat(lastPosition.x),parseFloat(lastPosition.y)], 
+			[parseFloat(x),parseFloat(y)]
+		];
+		line1 = group.line(plotVal).fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
+		*/
+		
+		
 		while(parseInt(baseShape.long) > 10){
 			console.log('=============================');
 		
@@ -129,40 +158,53 @@ Y=distance*sin(angle) +y0
 				console.log('');
 				console.log('index'+index);
 				console.log("value:"+JSON.stringify(value, null, 2));
-				var RadianAngle = (value.angle * Math.PI / 180)
+				var RadianAngle = (value.angle * Math.PI / 180);
 	
 				if(("B"|"C") == index){
-					distance = baseShape.long
+					distance = baseShape.long;
 				}else{
-					distance = baseShape.short
-				
+					distance = baseShape.short;
 				}
-					//x = value.distance * Math.cos(value.angle * Math.PI / 180);
-					x = distance * Math.cos(RadianAngle);
-					y = distance * Math.sin(RadianAngle);
+				//x = value.distance * Math.cos(value.angle * Math.PI / 180);
+				
+				console.log('lastPosition.x: '+lastPosition.x);
+				console.log('lastPosition.y: '+lastPosition.y);
+				console.log('Math.abs(xtl): '+Math.abs(xtl));
+				console.log('Math.abs(ytl): '+Math.abs(ytl));
+				
+				
+				
+				
+				
+				x = (distance * Math.cos(RadianAngle)) + lastPosition.x ;//Math.abs(xtl)
+				y = (distance * Math.sin(RadianAngle)) + lastPosition.y ;
+				
+				x = (distance * Math.cos(RadianAngle)) + Math.abs(xtl) ;//
+				y = (distance * Math.sin(RadianAngle)) + Math.abs(ytl) ;
+					
 				console.log('RadianAngle '+RadianAngle);
-				//console.log('x'+x);
-				//console.log('y'+y);
+				console.log('x'+x);
+				console.log('y'+y);
 				
 				
-				var line = group.line().fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
 				plotVal = [
 					[parseFloat(lastPosition.x),parseFloat(lastPosition.y)], 
 					[parseFloat(x),parseFloat(y)]
 				];
+				line[i] = group.line(plotVal).fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
 	
-				//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
+				console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
 				
-				line.animate(1500).plot(plotVal);
+				//line[i].animate(1500).plot(plotVal);
 				
-				console.log("lastPosition:"+JSON.stringify(lastPosition, null, 2));
+				//console.log("lastPosition:"+JSON.stringify(lastPosition, null, 2));
 				if('A' == index && 0 == lastPosition.x){
 					baseShape.lines["A"].angle = 40;
 				
 				}
 				lastPosition = {
-					"x" : x,
-					"y" : y,
+					"x" : x ,
+					"y" : y ,
 				};
 				//console.log("lastPosition:"+JSON.stringify(lastPosition, null, 2));
 				//baseShape.lines[index].distance = (parseFloat(baseShape.lines[index].distance) - lineSpacing);
@@ -175,22 +217,24 @@ Y=distance*sin(angle) +y0
 				}
 				
 			});
-					i++;
+			//group.animate(1500).plot(plotVal);
+				i++;
 				console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
 				
 		}
+		
 		//leftSightLine = group.line(moveX, moveY, (xPoint+moveX), (yPoint+moveY)).stroke({ width: 10 });
 		//var polyline = group.polyline([0,0, 25,14.5, 0,50, -25,14.75, -3.5,2]).animate().fill('none').stroke({ width: 1 });
 
 		
-		draw.size(1000, 1000);
+		draw.size(500, 500);
 		boxSettings = box.attr('viewBox').split(" ");
-		//console.log('boxSettings'+JSON.stringify(boxSettings, null, 2));
+		console.log('boxSettings'+JSON.stringify(boxSettings, null, 2));
 		viewSettings = moveX+' '+moveY+' '+boxSettings[2]+' '+boxSettings[3];
-		viewSettings = startX+' '+startY+' 100 100';
+		viewSettings = startX+' '+startY+' 500 500';
 
-		//box.attr({viewBox: viewSettings});
-		var line = group.polyline().fill('none').stroke({ width: 1 });
+		box.attr({viewBox: viewSettings});
+		//var line = group.polyline().fill('none').stroke({ width: 1 });
 		
 		//line.animate(1000).plot([[0,0], [25,14.5], [0,50], [-25,14.75], [-3.5,2]]).stroke({ width: 1 });
 		//line.animate(3000).plot([[0,0], [25,14.5], [0,50], [-25,14.75], [-3.5,2]]);
@@ -209,7 +253,7 @@ Y=distance*sin(angle) +y0
 		  });
 		  
 		  // zoom out
-		  panZoomInstance.zoom(0.2)
+		  panZoomInstance.zoom(2)
 			
 		  $('#move').on('click', function() {
 			// Pan by any values from -80 to 80
