@@ -47,7 +47,10 @@
 		var xbr = 200;
 		var ybr = -200;
 
-		
+		function denada(){
+			console.log('denada');
+			return null;
+		}
 	
 		var worldXTotal = Math.abs(xtl) + Math.abs(xbr);
 		var worldYTotal = Math.abs(ytl) + Math.abs(ybr); 		
@@ -67,27 +70,34 @@
 				"x" : Math.abs(xtl),
 				"y" : Math.abs(ytl)
 			},
-			"long": 43.419,
-			"short": 29.1034,
+			"long": 100.25,
+			"short": 57.6,
 			"lines": {
 				"A": {
 					"angle": 30,
 
-					"distance": 29.1034362232,
+					//"distance": 29.1034362232,
 				},
 				"B": {
 					"angle": 120,
-					"distance": 43.4194656807,
+					//"distance": 43.4194656807,
 				},
 				"C": {
 					"angle": 240,
-					"distance": 43.4194656807,
+					//"distance": 43.4194656807,
 				},
 				"D": {
+					"angle": 330,
+					//"angle": 120,
+					//"distance": 27.9006920332,
+				},
+				/*
+				"E": {
 					"angle": 320,
-					"angle": 120,
-					"distance": 27.9006920332,
+					//"angle": 120,
+					//"distance": 27.9006920332,
 				}
+				*/
 				
 			}
 		};
@@ -105,7 +115,8 @@
 
 		//draw.rect().attr({id:"grid_fill", width:"100%", height:"100%", fill:"url(#grid)"});
 		draw.rect().attr({id:"grid_fill", width:worldXTotal, height:worldYTotal, fill:"url(#grid)"});
-		lineSpacing = 20;
+		lineSpacing = 5;
+		
 		fillStart = 606;
 		coursesIdx = 0;
 		startY = -50;
@@ -146,13 +157,13 @@ Y=distance*sin(angle) +y0
 			"x1": 0,
 			"y1": 0,
 			"x2": 0,
-			"y2": 200,
+			"y2": 0,
 		};
+		/**********************
 		plotVal = [
 			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
 			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
 		];
-		/**********************
 		group.line(plotVal).fill('none').stroke({ width: 1, color: '#080' }).attr({id:"line_FFS"});
 		*/
 		
@@ -198,6 +209,20 @@ Y=distance*sin(angle) +y0
 		];
 		group.line(plotVal).fill('none').stroke({ width: 1, color: '#00a' }).attr({id:"line_FFS_03"});
 		
+		/***********************/
+		var RadianAngle = (baseShape.lines.D.angle * Math.PI / 180);
+		coords = {
+			"x1": coords.x2,
+			"y1": coords.y2,
+			"x2": (baseShape.short * Math.cos(RadianAngle)) + coords.x2,
+			"y2": (baseShape.short * Math.sin(RadianAngle)) + coords.y2,
+		};
+		plotVal = [
+			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+		];
+		group.line(plotVal).fill('none').stroke({ width: 1, color: '#00a' }).attr({id:"line_FFS_04"});
+		
 		
 		
 		/**
@@ -207,55 +232,61 @@ Y=distance*sin(angle) +y0
 		];
 		line1 = group.line(plotVal).fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
 		
-		
-		
+		*/
+		coords = {
+			"x1": 0,
+			"y1": 0,
+			"x2": 0,
+			"y2": 0,
+		};
+		plotVal = [
+			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+		];		
 		while(parseInt(baseShape.long) > 10){
 			console.log('=============================');
 		
 			$.each(baseShape.lines, function( index, value ) {
-				console.log('');
-				console.log('index'+index);
-				console.log("value:"+JSON.stringify(value, null, 2));
+				setTimeout(denada, 2000);
+				//console.log('');
+				//console.log('index'+index);
+				//console.log("value:"+JSON.stringify(value, null, 2));
 				var RadianAngle = (value.angle * Math.PI / 180);
-	
-				if(("B"|"C") == index){
+
+				
+				console.log('index: '+index);
+				if("B" == index || "C" == index){
 					distance = baseShape.long;
+					console.log('distance: baseShape.long '+distance);
 				}else{
 					distance = baseShape.short;
+					console.log('distance:baseShape.short '+distance);
 				}
-				//x = value.distance * Math.cos(value.angle * Math.PI / 180);
-				
-				console.log('lastPosition.x: '+lastPosition.x);
-				console.log('lastPosition.y: '+lastPosition.y);
-				console.log('Math.abs(xtl): '+Math.abs(xtl));
-				console.log('Math.abs(ytl): '+Math.abs(ytl));
-				
-				
-				
-				
-				
-				x = (distance * Math.cos(RadianAngle)) + lastPosition.x ;//Math.abs(xtl)
-				y = (distance * Math.sin(RadianAngle)) + lastPosition.y ;
-				
-				x = (distance * Math.cos(RadianAngle)) + Math.abs(xtl) ;//
-				y = (distance * Math.sin(RadianAngle)) + Math.abs(ytl) ;
-					
-				console.log('RadianAngle '+RadianAngle);
-				console.log('x'+x);
-				console.log('y'+y);
-				
-				
+
+				coords = {
+					"x1": coords.x2,
+					"y1": coords.y2,
+					"x2": (distance * Math.cos(RadianAngle)) + coords.x2,
+					"y2": (distance * Math.sin(RadianAngle)) + coords.y2,
+				};
 				plotVal = [
-					[parseFloat(lastPosition.x),parseFloat(lastPosition.y)], 
-					[parseFloat(x),parseFloat(y)]
+					[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+					[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
 				];
 				line[i] = group.line(plotVal).fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
 	
-				console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
-				
+				console.log("coords:"+JSON.stringify(coords, null, 2));
+				//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
+				if('C' == index ){
+					baseShape.long = (parseFloat(baseShape.long) - lineSpacing);
+					baseShape.short = (parseFloat(baseShape.long) - lineSpacing);
+					//console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
+					console.log("SHORTEN: "+lineSpacing);
+				}				
 				//line[i].animate(1500).plot(plotVal);
 				
 				//console.log("lastPosition:"+JSON.stringify(lastPosition, null, 2));
+				/**
 				if('A' == index && 0 == lastPosition.x){
 					baseShape.lines["A"].angle = 40;
 				
@@ -264,15 +295,11 @@ Y=distance*sin(angle) +y0
 					"x" : x ,
 					"y" : y ,
 				};
+				*/
 				//console.log("lastPosition:"+JSON.stringify(lastPosition, null, 2));
 				//baseShape.lines[index].distance = (parseFloat(baseShape.lines[index].distance) - lineSpacing);
 				console.log("baseShape.lines["+index+"]:"+JSON.stringify(baseShape.lines[index], null, 2));
-				if('A' == index ){
-					baseShape.long = (parseFloat(baseShape.long) - lineSpacing);
-					baseShape.short = (parseFloat(baseShape.long) - lineSpacing);
-					console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
-				
-				}
+
 				
 			});
 			//group.animate(1500).plot(plotVal);
@@ -280,7 +307,9 @@ Y=distance*sin(angle) +y0
 				console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
 				
 		}
-		*/
+		
+		
+		
 		//leftSightLine = group.line(moveX, moveY, (xPoint+moveX), (yPoint+moveY)).stroke({ width: 10 });
 		//var polyline = group.polyline([0,0, 25,14.5, 0,50, -25,14.75, -3.5,2]).animate().fill('none').stroke({ width: 1 });
 
@@ -344,7 +373,7 @@ bisected equilateral
 75	57.5
 25	57.7
 50	72.75
-
+50	14.75
 center points
 75	85.5
 25	85.5
