@@ -40,7 +40,7 @@
 
 
 	<script >
-		var draw = SVG('notification').size(400, 400).attr({id:"svg_id"});
+		var draw = SVG('notification').size(400, 400).attr({id:"svg_id"}).scale(1, -1);
 		
 		var xtl = -200;
 		var ytl = 200;
@@ -71,18 +71,16 @@
 			"short": 29.1034,
 			"lines": {
 				"A": {
-					"angle": 0,
+					"angle": 30,
 
 					"distance": 29.1034362232,
 				},
 				"B": {
-					"angle": -80,
-					"angle": 90,
+					"angle": 120,
 					"distance": 43.4194656807,
 				},
 				"C": {
-					"angle": -220,
-					"angle": 210,
+					"angle": 240,
 					"distance": 43.4194656807,
 				},
 				"D": {
@@ -138,9 +136,69 @@ Y=distance*sin(angle) +y0
 		
 		moveX = -50 + Math.abs(xtl);
 		moveY = -50 + Math.abs(ytl);
-		var rect = group.rect(100, 100).fill('#f06').move(moveX, moveY);
+		var rect = group.rect(100, 100).fill({color: '#f06', opacity: 0.6}).move(moveX, moveY);
 		var rectTL = group.rect(10, 10).fill('#f06').move(0, 0);
 		var rectBL = group.rect(10, 10).fill('#f06').move(390, 390);
+		/***********************/
+		/***********************/
+		distance = baseShape.short;
+		coords = {
+			"x1": 0,
+			"y1": 0,
+			"x2": 0,
+			"y2": 200,
+		};
+		plotVal = [
+			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+		];
+		/**********************
+		group.line(plotVal).fill('none').stroke({ width: 1, color: '#080' }).attr({id:"line_FFS"});
+		*/
+		
+		/***********************/
+		var RadianAngle = (baseShape.lines.A.angle * Math.PI / 180);
+		coords = {
+			"x1": 0,
+			"y1": 0,
+			"x2": (baseShape.short * Math.cos(RadianAngle)) + coords.x1,
+			"y2": (baseShape.short * Math.sin(RadianAngle)) + coords.y1,
+		};
+		plotVal = [
+			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+		];
+		group.line(plotVal).fill('none').stroke({ width: 1, color: '#006' }).attr({id:"line_FFS_01"});
+		
+		/***********************/
+		var RadianAngle = (baseShape.lines.B.angle * Math.PI / 180);
+		coords = {
+			"x1": coords.x2,
+			"y1": coords.y2,
+			"x2": (baseShape.long * Math.cos(RadianAngle)) + coords.x2,
+			"y2": (baseShape.long * Math.sin(RadianAngle)) + coords.y2,
+		};
+		plotVal = [
+			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+		];
+		group.line(plotVal).fill('none').stroke({ width: 1, color: '#008' }).attr({id:"line_FFS_02"});
+		
+		/***********************/
+		var RadianAngle = (baseShape.lines.C.angle * Math.PI / 180);
+		coords = {
+			"x1": coords.x2,
+			"y1": coords.y2,
+			"x2": (baseShape.long * Math.cos(RadianAngle)) + coords.x2,
+			"y2": (baseShape.long * Math.sin(RadianAngle)) + coords.y2,
+		};
+		plotVal = [
+			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+		];
+		group.line(plotVal).fill('none').stroke({ width: 1, color: '#00a' }).attr({id:"line_FFS_03"});
+		
+		
 		
 		/**
 		plotVal = [
@@ -148,7 +206,7 @@ Y=distance*sin(angle) +y0
 			[parseFloat(x),parseFloat(y)]
 		];
 		line1 = group.line(plotVal).fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
-		*/
+		
 		
 		
 		while(parseInt(baseShape.long) > 10){
@@ -222,7 +280,7 @@ Y=distance*sin(angle) +y0
 				console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
 				
 		}
-		
+		*/
 		//leftSightLine = group.line(moveX, moveY, (xPoint+moveX), (yPoint+moveY)).stroke({ width: 10 });
 		//var polyline = group.polyline([0,0, 25,14.5, 0,50, -25,14.75, -3.5,2]).animate().fill('none').stroke({ width: 1 });
 
