@@ -56,15 +56,9 @@
 		var worldYTotal = Math.abs(ytl) + Math.abs(ybr); 		
 		/**
 
-		
-		0,0	30* 	28.9006920332
-			90*		43.4194656807
-			60*		28.9006920332
-			90*		
-		
-		
-		
 		*/
+		var longLine= 100.25;
+		var shortLine= 57.6;
 		var baseShape = {
 			"origin" : {
 				"x" : Math.abs(xtl),
@@ -75,30 +69,20 @@
 			"lines": {
 				"A": {
 					"angle": 30,
-
-					//"distance": 29.1034362232,
+					"distance": parseFloat(shortLine),
 				},
 				"B": {
 					"angle": 120,
-					//"distance": 43.4194656807,
+					"distance": parseFloat(longLine),			
 				},
 				"C": {
 					"angle": 240,
-					//"distance": 43.4194656807,
+					"distance": parseFloat(longLine),			
 				},
 				"D": {
 					"angle": 330,
-					//"angle": 120,
-					//"distance": 27.9006920332,
+					"distance": parseFloat(shortLine),
 				},
-				/*
-				"E": {
-					"angle": 320,
-					//"angle": 120,
-					//"distance": 27.9006920332,
-				}
-				*/
-				
 			}
 		};
 		
@@ -115,7 +99,7 @@
 
 		//draw.rect().attr({id:"grid_fill", width:"100%", height:"100%", fill:"url(#grid)"});
 		draw.rect().attr({id:"grid_fill", width:worldXTotal, height:worldYTotal, fill:"url(#grid)"});
-		lineSpacing = 5;
+		
 		
 		fillStart = 606;
 		coursesIdx = 0;
@@ -134,16 +118,15 @@
 X=distance*cos(angle) +x0
 
 Y=distance*sin(angle) +y0
-
-		*/
+		*
+		**/
 		
 		//draw.rect().attr({id:"grid_fill", width:500, height:500, fill:"url(#grid)"});
 		
 		
 		group = groupContainer.group().attr({id:"abstraction"});
 		lastPosition = baseShape.origin;
-		i = 1;
-		var line = [];
+
 		
 		moveX = -50 + Math.abs(xtl);
 		moveY = -50 + Math.abs(ytl);
@@ -152,22 +135,20 @@ Y=distance*sin(angle) +y0
 		var rectBL = group.rect(10, 10).fill('#f06').move(390, 390);
 		/***********************/
 		/***********************/
-		distance = baseShape.short;
+		//distance = baseShape.short;
 		coords = {
 			"x1": 0,
 			"y1": 0,
 			"x2": 0,
 			"y2": 0,
 		};
-		/**********************
+		/*
 		plotVal = [
 			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
 			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
 		];
 		group.line(plotVal).fill('none').stroke({ width: 1, color: '#080' }).attr({id:"line_FFS"});
-		*/
-		
-		/***********************/
+
 		var RadianAngle = (baseShape.lines.A.angle * Math.PI / 180);
 		coords = {
 			"x1": 0,
@@ -179,9 +160,11 @@ Y=distance*sin(angle) +y0
 			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
 			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
 		];
+		console.log("coords:"+JSON.stringify(coords, null, 2));
+		//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
 		group.line(plotVal).fill('none').stroke({ width: 1, color: '#006' }).attr({id:"line_FFS_01"});
 		
-		/***********************/
+		//-----------------------------------------------
 		var RadianAngle = (baseShape.lines.B.angle * Math.PI / 180);
 		coords = {
 			"x1": coords.x2,
@@ -193,9 +176,12 @@ Y=distance*sin(angle) +y0
 			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
 			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
 		];
+		console.log("coords:"+JSON.stringify(coords, null, 2));
+		//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
+
 		group.line(plotVal).fill('none').stroke({ width: 1, color: '#008' }).attr({id:"line_FFS_02"});
 		
-		/***********************/
+		//-----------------------------------------------
 		var RadianAngle = (baseShape.lines.C.angle * Math.PI / 180);
 		coords = {
 			"x1": coords.x2,
@@ -207,9 +193,12 @@ Y=distance*sin(angle) +y0
 			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
 			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
 		];
+		console.log("coords:"+JSON.stringify(coords, null, 2));
+		//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
+
 		group.line(plotVal).fill('none').stroke({ width: 1, color: '#00a' }).attr({id:"line_FFS_03"});
 		
-		/***********************/
+		//-----------------------------------------------
 		var RadianAngle = (baseShape.lines.D.angle * Math.PI / 180);
 		coords = {
 			"x1": coords.x2,
@@ -221,11 +210,14 @@ Y=distance*sin(angle) +y0
 			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
 			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
 		];
+		console.log("coords:"+JSON.stringify(coords, null, 2));
+		//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
+
 		group.line(plotVal).fill('none').stroke({ width: 1, color: '#00a' }).attr({id:"line_FFS_04"});
 		
 		
 		
-		/**
+		
 		plotVal = [
 			[parseFloat(lastPosition.x),parseFloat(lastPosition.y)], 
 			[parseFloat(x),parseFloat(y)]
@@ -233,6 +225,7 @@ Y=distance*sin(angle) +y0
 		line1 = group.line(plotVal).fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
 		
 		*/
+		
 		coords = {
 			"x1": 0,
 			"y1": 0,
@@ -242,10 +235,20 @@ Y=distance*sin(angle) +y0
 		plotVal = [
 			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
 			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
-		];		
-		while(parseInt(baseShape.long) > 10){
-			console.log('=============================');
+		];
+		i = 1;
+		var line = [];
+		ii = 0;
+		lineSpacing = 10;
 		
+		
+		rootVal = Math.sqrt(Math.PI/5);
+		rootVal = .9;  
+		rootVal2 = .9;  
+		
+		while(i < 5 ){//||  || ii < 100
+			console.log('=============================');
+			console.log('i:START '+i);
 			$.each(baseShape.lines, function( index, value ) {
 				setTimeout(denada, 2000);
 				//console.log('');
@@ -255,57 +258,122 @@ Y=distance*sin(angle) +y0
 
 				
 				console.log('index: '+index);
-				if("B" == index || "C" == index){
-					distance = baseShape.long;
-					console.log('distance: baseShape.long '+distance);
-				}else{
-					distance = baseShape.short;
-					console.log('distance:baseShape.short '+distance);
+				/**/
+				console.log("baseShape.lines["+index+"]:"+JSON.stringify(baseShape.lines[index], null, 2));
+				if("D" == index && 1 == i){
+					baseShape.lines[index].distance = (baseShape.lines[index].distance * rootVal);
 				}
+				if( i > 1 ){
+					switch(index){
+						case"C":
+							baseShape.lines[index].distance = (baseShape.lines[index].distance * rootVal2);
+							break;
+						case"B":
+							baseShape.lines[index].distance = (baseShape.lines[index].distance * rootVal2);
+							break;
+						case"D":
+							baseShape.lines[index].distance = (baseShape.lines[index].distance * rootVal);
+							break;
+						default: 
+							//baseShape.lines[index].distance = (baseShape.lines[index].distance - lineSpacing/2)
+							break;
+					}
+				}
+					/*
+					*/
+				if( ii >=  3 ){
+					
+					console.log("baseShape.lines["+index+"]:"+JSON.stringify(baseShape.lines[index], null, 2));
+					//console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
+					console.log("SHORTEN: "+lineSpacing);
 
+				}
+				
 				coords = {
 					"x1": coords.x2,
 					"y1": coords.y2,
-					"x2": (distance * Math.cos(RadianAngle)) + coords.x2,
-					"y2": (distance * Math.sin(RadianAngle)) + coords.y2,
+					"x2": (baseShape.lines[index].distance * Math.cos(RadianAngle)) + coords.x2,
+					"y2": (baseShape.lines[index].distance * Math.sin(RadianAngle)) + coords.y2,
 				};
 				plotVal = [
 					[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
 					[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
 				];
-				line[i] = group.line(plotVal).fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
+				line[i] = group.line(plotVal).fill('none').stroke({ width: 1, color: '#f33' }).attr({id:"line_"+index+"_"+i});
 	
 				console.log("coords:"+JSON.stringify(coords, null, 2));
 				//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
-				if('C' == index ){
-					baseShape.long = (parseFloat(baseShape.long) - lineSpacing);
-					baseShape.short = (parseFloat(baseShape.long) - lineSpacing);
+				console.log('ii:'+ii);
+				
+				//line[i].animate(1500).plot(plotVal);
+
+				//console.log("lastPosition:"+JSON.stringify(lastPosition, null, 2));
+				if( ii >=  3 ){
+					baseShape.lines[index].distance = (baseShape.lines[index].distance * rootVal );
+					/*
+						if(index == "A"){
+							if( i >=  6 ){
+								baseShape.lines[index].distance = (baseShape.lines[index].distance - (lineSpacing*.85));
+							}else{
+								baseShape.lines[index].distance = (baseShape.lines[index].distance - (lineSpacing*.635) );
+							}
+							//baseShape.lines[index].distance = (baseShape.lines[index].distance - (lineSpacing*.635))
+						}
+					
+					if(0 == i % 2){
+						console.log("EVEN: "+lineSpacing);
+						if(index == "A"){
+							baseShape.lines[index].distance = (baseShape.lines[index].distance - (lineSpacing*.63))
+						}
+						
+					}else{
+					
+						if(index == "A"){
+							baseShape.lines[index].distance = (baseShape.lines[index].distance - (lineSpacing*.63))
+						}else if(index == "C"){
+							//baseShape.lines[index].distance = (baseShape.lines[index].distance - (lineSpacing))
+						}
+						console.log("ODD: "+lineSpacing);
+					}
+					*/
+					
+					
+					
+					console.log("baseShape.lines["+index+"]:"+JSON.stringify(baseShape.lines[index], null, 2));
 					//console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
 					console.log("SHORTEN: "+lineSpacing);
-				}				
-				//line[i].animate(1500).plot(plotVal);
-				
-				//console.log("lastPosition:"+JSON.stringify(lastPosition, null, 2));
-				/**
-				if('A' == index && 0 == lastPosition.x){
-					baseShape.lines["A"].angle = 40;
+	
+				}
+				/*
+				---------------------------
+				console.log("SHORTEN:(index == 'A' )"+(index == 'A' ));
+				console.log("SHORTEN:("+i+" < 2)"+(i < 2));
+				console.log("DAFUQ D["+index+"]["+i+"] ["+("D" == index && 1 == i)+"] ");
+				console.log("DAFUQ A["+index+"]["+i+"] ["+((index == 'A' ) && (i > 2))+"] ");
+				*/
+				if(
+					!(index == 'D' && i == 1)
+					&&
+					!(index == 'A' && i < 2)
+				){
+					console.log("SHORTEN: "+lineSpacing);
+					baseShape.lines[index].distance = (baseShape.lines[index].distance * rootVal);
+				}else{
+					console.log("DAFUQ=====================================================================: "+lineSpacing);
 				
 				}
-				lastPosition = {
-					"x" : x ,
-					"y" : y ,
-				};
-				*/
-				//console.log("lastPosition:"+JSON.stringify(lastPosition, null, 2));
-				//baseShape.lines[index].distance = (parseFloat(baseShape.lines[index].distance) - lineSpacing);
+				
 				console.log("baseShape.lines["+index+"]:"+JSON.stringify(baseShape.lines[index], null, 2));
 
-				
+				ii++;
+				console.log('ii:'+ii);
+				//return;
 			});
 			//group.animate(1500).plot(plotVal);
+				console.log('i:END '+i);
 				i++;
 				console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
-				
+				//break;
 		}
 		
 		
