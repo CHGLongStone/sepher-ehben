@@ -47,8 +47,11 @@
 		var xbr = 200;
 		var ybr = -200;
 
-		function denada(){
-			console.log('denada');
+		function denada(plotVal, index, i){
+			console.log('denada plotVal:'+plotVal);
+			console.log('denada index:'+index);
+			console.log('denada i:'+i);
+			line[i] = group.line(plotVal).fill('none').stroke({ width: 1, color: '#f33' }).attr({id:"line_"+index+"_"+i});
 			return null;
 		}
 	
@@ -69,23 +72,29 @@
 			"lines": {
 				"A": {
 					"angle": 30,
+					"angle": 150,
 					"distance": parseFloat(shortLine),
 				},
 				"B": {
-					"angle": 120,
+					"angle": 240,
+					"angle": 60,
 					"distance": parseFloat(longLine),			
 				},
 				"C": {
 					"angle": 240,
+					"angle": 300,
 					"distance": parseFloat(longLine),			
 				},
 				"D": {
 					"angle": 330,
+					"angle": 210,
 					"distance": parseFloat(shortLine),
 				},
 			}
 		};
 		
+		delayValue = 0;
+		delayIncrement = 50;
 		moveX = 100;
 		moveY = 100;
 		var box = draw.viewbox(Math.abs(xtl), Math.abs(ytl), 100, 100);
@@ -243,14 +252,14 @@ Y=distance*sin(angle) +y0
 		
 		
 		rootVal = Math.sqrt(Math.PI/5);
-		rootVal = .9;  
-		rootVal2 = .9;  
+		rootVal = .86;  
+		rootVal2 = .94;  
 		
-		while(i < 5 ){//||  || ii < 100
+		while(i < 8 ){//||  || ii < 100
 			console.log('=============================');
 			console.log('i:START '+i);
 			$.each(baseShape.lines, function( index, value ) {
-				setTimeout(denada, 2000);
+				
 				//console.log('');
 				//console.log('index'+index);
 				//console.log("value:"+JSON.stringify(value, null, 2));
@@ -299,7 +308,10 @@ Y=distance*sin(angle) +y0
 					[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
 					[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
 				];
-				line[i] = group.line(plotVal).fill('none').stroke({ width: 1, color: '#f33' }).attr({id:"line_"+index+"_"+i});
+				console.log('delayValue:'+delayValue);
+				setTimeout(denada, delayValue, plotVal, index, i); 
+				delayValue =  (delayValue + delayIncrement);
+				//line[i] = group.line(plotVal).fill('none').stroke({ width: 1, color: '#f33' }).attr({id:"line_"+index+"_"+i});
 	
 				console.log("coords:"+JSON.stringify(coords, null, 2));
 				//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
