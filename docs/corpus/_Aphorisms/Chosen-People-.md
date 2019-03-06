@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Aphorisms — Chosen People…'
-short_name: Chosen-People-
+short_name: ''
+section_name: Aphorisms
+article_name: Chosen-People-
 description: >-
   Chosen? Chosen by what?The integrity and the extent To which you embody your
   covenant?

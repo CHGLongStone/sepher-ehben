@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Origins — The Book of Stone'
-short_name: The-Book-of-Stone
+short_name: ''
+section_name: Origins
+article_name: The-Book-of-Stone
 description: >-
   You don’t need to be a Saint or a Bodhisattva to make a difference in the
   world, acting with personal integrity is the most meaningful act

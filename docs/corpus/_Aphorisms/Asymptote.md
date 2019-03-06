@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Aphorisms — Asymptote'
-short_name: Asymptote
+short_name: ''
+section_name: Aphorisms
+article_name: Asymptote
 description: >-
   As you approach any curved slope such as a learning curve it is easier
   traveling, as you approach the sheer incline every purchase to move…

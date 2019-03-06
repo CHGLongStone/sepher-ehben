@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Reveries — Longstone — Ideology, Choose your Poison…'
-short_name: Longstone---Ideology--Choose-your-Poison-
+short_name: ''
+section_name: Reveries
+article_name: Longstone---Ideology--Choose-your-Poison-
 description: >-
   I have to admit I’m thoroughly disgusted when I hear someone use a phrase like
   “every ideology deserves a place at the table”. Every…

@@ -2,7 +2,9 @@
 title: >-
   Sepher Ehben: Reveries — Longstone — #OpenCiv the requirements of responsible
   citizenship.
-short_name: Longstone----OpenCiv-the-requirements-of-responsible-citizenship-
+short_name: ''
+section_name: Reveries
+article_name: Longstone----OpenCiv-the-requirements-of-responsible-citizenship-
 description: >-
   Becoming masterful at any given skill requires at least 10,000 hours, 5 years
   of 8 hour work days, 2 weeks vacation per year. This is not…

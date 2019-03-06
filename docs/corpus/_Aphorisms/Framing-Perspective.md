@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Aphorisms — Framing Perspective'
-short_name: Framing-Perspective
+short_name: ''
+section_name: Aphorisms
+article_name: Framing-Perspective
 description: >-
   Many esoteric axioms are actually "litmus tests" of perspective testing the
   apprehension and comprehension of the initiate.

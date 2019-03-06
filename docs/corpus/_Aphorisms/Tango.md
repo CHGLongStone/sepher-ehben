@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Aphorisms — Tango'
-short_name: Tango
+short_name: ''
+section_name: Aphorisms
+article_name: Tango
 description: >-
   Embody Ha Shem, Embrace Leviathan.When the Logos dances with the Shadow, the
   Shadow can not run errant. When the Logos leads the dance…

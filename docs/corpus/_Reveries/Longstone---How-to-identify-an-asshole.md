@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Reveries — Longstone — How to identify an asshole'
-short_name: Longstone---How-to-identify-an-asshole
+short_name: ''
+section_name: Reveries
+article_name: Longstone---How-to-identify-an-asshole
 description: "How to identify an assholeFirst we need to define our boundaries\_Since we’re looking at a list we need some\_Quantitative and…"
 date: '2018-12-10T20:27:53.244Z'
 categories: ''

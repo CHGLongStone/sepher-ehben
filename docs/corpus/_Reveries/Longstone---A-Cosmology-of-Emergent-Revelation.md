@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Reveries — Longstone — A Cosmology of Emergent Revelation'
-short_name: Longstone---A-Cosmology-of-Emergent-Revelation
+short_name: ''
+section_name: Reveries
+article_name: Longstone---A-Cosmology-of-Emergent-Revelation
 description: WTFAQ does that mean?
 date: '2018-10-19T21:00:44.584Z'
 categories: ''

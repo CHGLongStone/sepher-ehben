@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Aphorisms — Thread'
-short_name: Thread
+short_name: ''
+section_name: Aphorisms
+article_name: Thread
 description: >-
   Your isolated thread of thought is not the line for plumb or skerrit, it has
   no business guiding policy or architecture.

@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Hymns to the Logos — Cold Open Ignition'
-short_name: Cold-Open-Ignition
+short_name: ''
+section_name: Hymns-to-the-Logos
+article_name: Cold-Open-Ignition
 description: "I’m here to ignite you, incite you\_In your passion for critical analysis\_A dialysis for your cognitive engagement\_But I’ve got way more…"
 date: '2018-12-04T22:27:07.727Z'
 categories: ''

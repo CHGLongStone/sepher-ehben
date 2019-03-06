@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Reveries — יעקב פטורהצ’י— Lobster Think Tank'
-short_name: יעקב פטורהצ’י---Lobster-Think-Tank
+short_name: ''
+section_name: Reveries
+article_name: יעקב פטורהצ’י---Lobster-Think-Tank
 description: re-posted with permission from author
 date: '2018-11-29T03:17:54.703Z'
 categories: ''

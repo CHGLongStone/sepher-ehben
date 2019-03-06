@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Aphorisms — Pathos'
-short_name: Pathos
+short_name: ''
+section_name: Aphorisms
+article_name: Pathos
 description: Fuck Pathos
 date: '2019-03-04T16:33:24.315Z'
 categories: ''

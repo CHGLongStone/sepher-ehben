@@ -1,6 +1,8 @@
 ---
 title: 'Sepher Ehben: Hymns to the Logos — Gnothi Seauton'
-short_name: Gnothi-Seauton
+short_name: ''
+section_name: Hymns-to-the-Logos
+article_name: Gnothi-Seauton
 description: >-
   Understand that integrity means “internal consistency” and walk your talk.
   Unless you do your speech is as meaningless as the opinion of…

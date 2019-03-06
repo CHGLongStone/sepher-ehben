@@ -2,7 +2,9 @@
 title: >-
   Sepher Ehben: Aphorisms — The Rule of Moral Authority does not exceed the
   dimensions of the hand
-short_name: The-Rule-of-Moral-Authority-does-not-exceed-the-dimensions-of-the-hand
+short_name: ''
+section_name: Aphorisms
+article_name: The-Rule-of-Moral-Authority-does-not-exceed-the-dimensions-of-the-hand
 description: The rule of moral authority does not exceed the dimensions of the hand.
 date: '2018-09-24T23:06:32.070Z'
 categories: ''
