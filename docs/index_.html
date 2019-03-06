@@ -1,0 +1,490 @@
+<html lang="en" >
+<head>
+	
+	<title>sepher ehben</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.4/svg.js"></script>
+
+	<!--
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.4/svg.min.js"></script>
+	<script src="/assets/scripts/nsts-svgmap.js"></script>
+	-->
+	<script src="assets/plugins/jquery.min.js"></script>
+	<script src="assets/scripts/svg-pan-zoom.js"></script>
+	<script src="assets/scripts/svg.filter.js"></script>
+	<style>
+
+	body {
+	  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: #111;
+	/* 
+	background: #111 url(images/transparent_isometric_cube.svg) no-repeat center top scroll; 
+	opacity: 0.2;
+	box-shadow: 0 5px 5px 0 rgba(0,0,0,.75); 
+	*/
+	-webkit-transition: none;
+	transition: none;
+	
+		
+		position: absolute;
+		left: 0;
+		top: 10%;
+		width: 100%;
+		text-align: center;
+		font-size: 18px;	  
+	}
+
+	.section {
+		
+	}
+	.title {
+		 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		 color: #f4ee42;
+	}
+	svg {
+		width: 500;
+		height: 500;
+	}
+
+	path.slice{
+		stroke-width:2px;
+	}
+
+	polylinez{
+		opacity: .3;
+		stroke: black;
+		stroke-width: 2px;
+		fill: none;
+	}
+
+	</style>
+
+</head>
+<body>
+
+				<div id="notification" name="notification" class="form-group">
+				</div>
+				<div class="title">
+					He appeared to me in flash<br> 
+					and thunder, <br> 
+					I am but a stone before him<br> 
+				</div>
+<!--
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <polygon points="50 15, 100 100, 0 100"/>
+</svg>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		var draw = SVG('notification').size(400, 400).attr({id:"svg_id"}).scale(1, -1);
+		
+		var xtl = -200;
+		var ytl = 200;
+		var xbr = 200;
+		var ybr = -200;
+		
+		var LineStroke = '#f4ee42';
+		var LineOpacity = 1;
+		var LineOpacityDecriment = .03;
+		var blurAmount = .6;
+		var blurAmountIncrement = .01;
+
+		/* 
+		place the line
+		*/
+		function denada(plotVal, index, i,LineOpacity, blurAmount){
+			console.log('denada plotVal:'+plotVal);
+			console.log('denada index:'+index);
+			console.log('denada i:'+i);
+			line[i] = group.line(plotVal).fill('none').stroke({ width: 1, opacity: LineOpacity,  color: LineStroke }).attr({id:"line_"+index+"_"+i}).filter(function(add) {add.gaussianBlur(blurAmount)});
+			line[i] = group2.line(plotVal).fill('none').stroke({ width: 1, opacity: LineOpacity, color: LineStroke }).attr({id:"line_"+index+"_"+i}).filter(function(add) {add.gaussianBlur(blurAmount)});
+			line[i] = group3.line(plotVal).fill('none').stroke({ width: 1, opacity: LineOpacity, color: LineStroke }).attr({id:"line_"+index+"_"+i}).filter(function(add) {add.gaussianBlur(blurAmount)});
+			return null;
+		}
+	
+		var worldXTotal = Math.abs(xtl) + Math.abs(xbr);
+		var worldYTotal = Math.abs(ytl) + Math.abs(ybr); 		
+		/**
+
+		*/
+		var longLine= 100.25;
+		var shortLine= 57.6;
+		var baseShape = {
+			"origin" : {
+				"x" : Math.abs(xtl),
+				"y" : Math.abs(ytl)
+			},
+			"long": 100.25,
+			"short": 57.6,
+			"lines": {
+				"A": {
+					"angle": 30,
+					"angle": 150,
+					"distance": parseFloat(shortLine),
+				},
+				"B": {
+					"angle": 240,
+					"angle": 60,
+					"distance": parseFloat(longLine),			
+				},
+				"C": {
+					"angle": 240,
+					"angle": 300,
+					"distance": parseFloat(longLine),			
+				},
+				"D": {
+					"angle": 330,
+					"angle": 210,
+					"distance": parseFloat(shortLine),
+				},
+			}
+		};
+		
+		delayValue = 100;
+		delayIncrement = 10;
+		moveX = 100;
+		moveY = 100;
+		var box = draw.viewbox(Math.abs(xtl), Math.abs(ytl), 100, 100);
+		var zoom = box.zoom;
+		var defs = draw.defs();
+		/*
+		var pattern = defs.pattern()
+		pattern.attr({id:"grid", width:"10", height:"10", patternUnits:"userSpaceOnUse"});
+		pattern.rect().attr({width:"100", height:"100", fill:"none"});
+		pattern.path().attr({d:"M 100 0 L 0 0 0 100", fill:"none", stroke:"black", "stroke-width":"1"});
+		console.log('-------');
+		*/
+
+
+		//draw.rect().attr({id:"grid_fill", width:worldXTotal, height:worldYTotal, fill:"url(#grid)"});
+		
+		
+		fillStart = 606;
+		coursesIdx = 0;
+		startY = -50;
+		startX = -50;
+
+
+		grid_fill = SVG.get('grid_fill');
+		groupContainer = draw.group().attr({id:"groupContainer"});
+		group = groupContainer.group().attr({id:"abstraction", "class":"section"});
+		group2 = group.clone();
+		group3 = group.clone();
+		
+		group2.attr({id:"classification", "class":"section"}).rotate(120, 200, 200);
+		group3.attr({id:"hypotheosis", "class":"section"}).rotate(240, 200, 200);
+		
+		lastPosition = baseShape.origin;
+
+		
+		moveX = -50 + Math.abs(xtl);
+		moveY = -50 + Math.abs(ytl);
+		//var rect = group.rect(100, 100).fill({color: '#f06', opacity: 0.6}).move(moveX, moveY);
+		var rectTL = group.rect(10, 10).fill('#f06').move(0, 0);
+		var rectBL = group.rect(10, 10).fill('#f06').move(390, 390);
+		/***********************/
+		/***********************/
+		//distance = baseShape.short;
+		coords = {
+			"x1": 0,
+			"y1": 0,
+			"x2": 0,
+			"y2": 0,
+		};
+
+		
+		coords = {
+			"x1": 0,
+			"y1": 0,
+			"x2": 0,
+			"y2": 0,
+		};
+		plotVal = [
+			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+		];
+		i = 1;
+		var line = [];
+		ii = 0;
+		lineSpacing = 10;
+		
+		
+		rootVal = Math.sqrt(Math.PI/5);
+		rootVal = .86;  
+		rootVal2 = .94;  
+		
+		while(i < 10 ){//||  || ii < 100
+			console.log('=============================');
+			console.log('i:START '+i);
+			$.each(baseShape.lines, function( index, value ) {
+				
+				//console.log('');
+				//console.log('index'+index);
+				//console.log("value:"+JSON.stringify(value, null, 2));
+				var RadianAngle = (value.angle * Math.PI / 180);
+
+				
+				console.log('index: '+index);
+				/**/
+				console.log("baseShape.lines["+index+"]:"+JSON.stringify(baseShape.lines[index], null, 2));
+				if("D" == index && 1 == i){
+					baseShape.lines[index].distance = (baseShape.lines[index].distance * rootVal);
+				}
+				if( i > 1 ){
+					switch(index){
+						case"C":
+							baseShape.lines[index].distance = (baseShape.lines[index].distance * rootVal2);
+							break;
+						case"B":
+							baseShape.lines[index].distance = (baseShape.lines[index].distance * rootVal2);
+							break;
+						case"D":
+							baseShape.lines[index].distance = (baseShape.lines[index].distance * rootVal);
+							break;
+						default: 
+							//baseShape.lines[index].distance = (baseShape.lines[index].distance - lineSpacing/2)
+							break;
+					}
+				}
+					/*
+					*/
+				if( ii >=  3 ){
+					
+					console.log("baseShape.lines["+index+"]:"+JSON.stringify(baseShape.lines[index], null, 2));
+					//console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
+					console.log("SHORTEN: "+lineSpacing);
+
+				}
+				
+				coords = {
+					"x1": coords.x2,
+					"y1": coords.y2,
+					"x2": (baseShape.lines[index].distance * Math.cos(RadianAngle)) + coords.x2,
+					"y2": (baseShape.lines[index].distance * Math.sin(RadianAngle)) + coords.y2,
+				};
+				plotVal = [
+					[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+					[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+				];
+				console.log('delayValue:'+delayValue);
+				setTimeout(denada, delayValue, plotVal, index, i,LineOpacity, blurAmount); 
+				delayValue =  (delayValue + delayIncrement);
+				//line[i] = group.line(plotVal).fill('none').stroke({ width: 1, color: '#f33' }).attr({id:"line_"+index+"_"+i});
+	
+				console.log("coords:"+JSON.stringify(coords, null, 2));
+				//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
+				console.log('ii:'+ii);
+				
+				//line[i].animate(1500).plot(plotVal);
+
+				//console.log("lastPosition:"+JSON.stringify(lastPosition, null, 2));
+				if( ii >=  3 ){
+					baseShape.lines[index].distance = (baseShape.lines[index].distance * rootVal );
+
+					
+					console.log("baseShape.lines["+index+"]:"+JSON.stringify(baseShape.lines[index], null, 2));
+					//console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
+					console.log("SHORTEN: "+lineSpacing);
+	
+				}
+
+				if(
+					!(index == 'D' && i == 1)
+					&&
+					!(index == 'A' && i < 2)
+				){
+					console.log("SHORTEN: "+lineSpacing);
+					baseShape.lines[index].distance = (baseShape.lines[index].distance * rootVal);
+				}else{
+					console.log("DAFUQ=====================================================================: "+lineSpacing);
+				
+				}
+				
+				console.log("baseShape.lines["+index+"]:"+JSON.stringify(baseShape.lines[index], null, 2));
+
+				ii++;
+				console.log('ii:'+ii);
+				LineOpacity = LineOpacity-LineOpacityDecriment;
+				blurAmount = blurAmount+blurAmountIncrement;
+				//return;
+			});
+			//group.animate(1500).plot(plotVal);
+				console.log('i:END '+i);
+				i++;
+				console.log("baseShape:"+JSON.stringify(baseShape, null, 2));
+				//break;
+		}
+		
+
+		
+		//leftSightLine = group.line(moveX, moveY, (xPoint+moveX), (yPoint+moveY)).stroke({ width: 10 });
+		//var polyline = group.polyline([0,0, 25,14.5, 0,50, -25,14.75, -3.5,2]).animate().fill('none').stroke({ width: 1 });
+
+		
+		draw.size(500, 500);
+		boxSettings = box.attr('viewBox').split(" ");
+		console.log('boxSettings'+JSON.stringify(boxSettings, null, 2));
+		viewSettings = moveX+' '+moveY+' '+boxSettings[2]+' '+boxSettings[3];
+		viewSettings = startX+' '+startY+' 500 500';
+
+		box.attr({viewBox: viewSettings});
+		//var line = group.polyline().fill('none').stroke({ width: 1 });
+		
+		//line.animate(1000).plot([[0,0], [25,14.5], [0,50], [-25,14.75], [-3.5,2]]).stroke({ width: 1 });
+		//line.animate(3000).plot([[0,0], [25,14.5], [0,50], [-25,14.75], [-3.5,2]]);
+		
+		
+		
+		$(function() {
+
+		  panZoomInstance = svgPanZoom('#svg_id', {
+			zoomEnabled: false,
+			controlIconsEnabled: false,
+			fit: true,
+			center: true,
+			minZoom: 0.001,
+			maxZoom: 800
+		  });
+		  
+		  // zoom out
+		  panZoomInstance.zoom(2)
+			
+		  $('#move').on('click', function() {
+			// Pan by any values from -80 to 80
+			panZoomInstance.panBy({x: Math.round(Math.random() * 160 - 80), y: Math.round(Math.random() * 160 - 80)})
+		  });
+		});
+		
+		
+		/*
+		plotVal = [
+			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+		];
+		group.line(plotVal).fill('none').stroke({ width: 1, color: '#080' }).attr({id:"line_FFS"});
+
+		var RadianAngle = (baseShape.lines.A.angle * Math.PI / 180);
+		coords = {
+			"x1": 0,
+			"y1": 0,
+			"x2": (baseShape.short * Math.cos(RadianAngle)) + coords.x1,
+			"y2": (baseShape.short * Math.sin(RadianAngle)) + coords.y1,
+		};
+		plotVal = [
+			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+		];
+		console.log("coords:"+JSON.stringify(coords, null, 2));
+		//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
+		group.line(plotVal).fill('none').stroke({ width: 1, color: '#006' }).attr({id:"line_FFS_01"});
+		
+		//-----------------------------------------------
+		var RadianAngle = (baseShape.lines.B.angle * Math.PI / 180);
+		coords = {
+			"x1": coords.x2,
+			"y1": coords.y2,
+			"x2": (baseShape.long * Math.cos(RadianAngle)) + coords.x2,
+			"y2": (baseShape.long * Math.sin(RadianAngle)) + coords.y2,
+		};
+		plotVal = [
+			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+		];
+		console.log("coords:"+JSON.stringify(coords, null, 2));
+		//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
+
+		group.line(plotVal).fill('none').stroke({ width: 1, color: '#008' }).attr({id:"line_FFS_02"});
+		
+		//-----------------------------------------------
+		var RadianAngle = (baseShape.lines.C.angle * Math.PI / 180);
+		coords = {
+			"x1": coords.x2,
+			"y1": coords.y2,
+			"x2": (baseShape.long * Math.cos(RadianAngle)) + coords.x2,
+			"y2": (baseShape.long * Math.sin(RadianAngle)) + coords.y2,
+		};
+		plotVal = [
+			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+		];
+		console.log("coords:"+JSON.stringify(coords, null, 2));
+		//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
+
+		group.line(plotVal).fill('none').stroke({ width: 1, color: '#00a' }).attr({id:"line_FFS_03"});
+		
+		//-----------------------------------------------
+		var RadianAngle = (baseShape.lines.D.angle * Math.PI / 180);
+		coords = {
+			"x1": coords.x2,
+			"y1": coords.y2,
+			"x2": (baseShape.short * Math.cos(RadianAngle)) + coords.x2,
+			"y2": (baseShape.short * Math.sin(RadianAngle)) + coords.y2,
+		};
+		plotVal = [
+			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
+			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
+		];
+		console.log("coords:"+JSON.stringify(coords, null, 2));
+		//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
+
+		group.line(plotVal).fill('none').stroke({ width: 1, color: '#00a' }).attr({id:"line_FFS_04"});
+		
+		
+		
+		
+		plotVal = [
+			[parseFloat(lastPosition.x),parseFloat(lastPosition.y)], 
+			[parseFloat(x),parseFloat(y)]
+		];
+		line1 = group.line(plotVal).fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
+		
+		*/		
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<!-- 
+https://www.comsol.com/blogs/how-to-build-a-parameterized-archimedean-spiral-geometry/
+
+bisected equilateral 
+
+0	100
+100	100
+50	100
+75	57.5
+25	57.7
+50	72.75
+50	14.75
+center points
+75	85.5
+25	85.5
+50	40
+
+-->
+
