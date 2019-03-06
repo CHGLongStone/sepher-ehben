@@ -44,6 +44,9 @@
 		<ul>
 		{% for post_name in site.Origins %}
 			  <li><a href="{{ post_name.url }}">{{ post_name.short_name }}</a></li>
+			  {{ post_name.relative_path }}
+			  {{ post_name.path }}
+			  {{ post_name.relative_path }}
 		{% endfor %}
 		</ul>
 		<h2>Aphorisms</h2>
