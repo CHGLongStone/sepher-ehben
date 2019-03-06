@@ -8,6 +8,5 @@ theme: jekyll-theme-minimal
 collections_dir: corpus
 collections:
   - Origins
-  - Aphorisms
   - Reveries
   - Practice
