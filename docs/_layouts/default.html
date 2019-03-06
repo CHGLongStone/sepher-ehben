@@ -49,16 +49,16 @@
 		<h2> site.collections </h2>
 			  {{ site.collections }}
 		   {% for item in site.collections %}
-			  {{ item }}
+			  {{ item.label }}
 		   {% endfor %}
 		   Origins
 		   {{ site.collections.Origins }}
 		{% for post_name in site.Origins %}
-			  <li><a href="{{ post_name.url }}">{{ page.post_name }}</a></li>
+			  <li><a href="{{ post_name.url }}">{{ post_name.url }}</a></li>
 		{% endfor %}
 		Aphorisms
 		{% for post_name in site.Aphorisms %}
-			  <li><a href="{{ post_name.url }}">{{ page.post_name }}</a></li>
+			  <li><a href="{{ post_name.url }}">{{ post_name.url }}</a></li>
 		{% endfor %}
       </header>
       <section>
