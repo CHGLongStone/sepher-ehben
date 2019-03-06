@@ -12,6 +12,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-aphorisms-framing-perspective-eda74ab5e673
 ---
 
+# Sepher Ehben: Aphorisms — Framing Perspective
+
+Many esoteric axioms are actually "litmus tests" of perspective testing the apprehension and comprehension of the initiate.
+
 Many esoteric axioms are actually "litmus tests" of perspective testing the apprehension and comprehension of the initiate.
 
 The deeper mysteries have long known the dangers of pearls before swine and sharp tools in the grasp of dull minds.
@@ -81,3 +85,9 @@ Like many early schools, the <cough> “Master of the New Aeon” liked to think
 True will is the will of the Logos.
 
 \*HaShem — while cross checking some etymology for another article (link here when published) I came across a [gnostic reference ](https://en.m.wikipedia.org/wiki/Ineffability).
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [July 6, 2018](https://medium.com/p/eda74ab5e673).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-aphorisms-framing-perspective-eda74ab5e673)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.
