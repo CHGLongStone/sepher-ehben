@@ -6,3 +6,9 @@ plugins:
   - jekyll-titles-from-headings
 theme: jekyll-theme-minimal
 collections_dir: corpus
+collections:
+  -Origins
+  -Aphorisms
+  -Hymns-to-the-Logos
+  -Reveries
+  -Practice
