@@ -40,6 +40,7 @@
 		<h2> site.pages </h2>
 		<ul>
 		   {% for page in site.pages %}
+			  {{ page }}
 			  <li><a href="{{ page.title }}">{{ page.title }}</a></li>
 		   {% endfor %}
 		</ul>
