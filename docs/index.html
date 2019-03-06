@@ -10,46 +10,68 @@
 	-->
 	<script src="assets/plugins/jquery.min.js"></script>
 	<script src="assets/scripts/svg-pan-zoom.js"></script>
-	<script src="assets/scripts/svg.filter.js"></script>
 	<style>
 
 	body {
 	  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background: #111;
+	  background: #000;
 	/* 
-	background: #111 url(images/transparent_isometric_cube.svg) no-repeat center top scroll; 
-	opacity: 0.2;
+	background: #555 url(assets/images/background2.png) no-repeat center top scroll;
 	box-shadow: 0 5px 5px 0 rgba(0,0,0,.75); 
+		position: absolute;
 	*/
 	-webkit-transition: none;
 	transition: none;
 	
 		
-		position: absolute;
+		/*
+		*/
 		left: 0;
-		top: 10%;
+		top: 0;
 		width: 100%;
 		text-align: center;
 		font-size: 18px;	  
 	}
 
+	input {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		background: #333;
+		color: #f4ee42;
+		border-width: 0px;
+		font-size: 18px;
+	}
 	.section {
 		
 	}
 	.title {
 		 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		 color: #f4ee42;
+		 position: relative;
+		 left: center;
+		 display:none;
+		 /*
+		 padding-
+		 */
+		 top: 200px;
+	}
+	.overlay {
+		background: #000 url(assets/images/background4.png) no-repeat center top scroll;
+		height: 600;
+		padding-top: 0px
+		 
 	}
 	svg {
 		width: 500;
 		height: 500;
+			 position: relative;
+		top: -100px;
 	}
 
 	path.slice{
 		stroke-width:2px;
 	}
 
-	polylinez{
+	polyline{
 		opacity: .3;
 		stroke: black;
 		stroke-width: 2px;
@@ -61,12 +83,17 @@
 </head>
 <body>
 
-				<div id="notification" name="notification" class="form-group">
-				</div>
-				<div class="title">
-					He appeared to me in flash<br> 
-					and thunder, <br> 
-					I am but a stone before him<br> 
+				<div id="notification" name="notification" class="overlay">
+					<div class="title" id="title">
+						He appeared to me in flash<br> 
+						and thunder, <br> 
+						I am but a stone before him<br> 
+						<br> 
+						From Temugin to Tenzin<br> 
+						the only true battles...<br> 
+						<br> 
+						<input type="text" name="passphrase" id="passphrase"><br> 
+					</div>
 				</div>
 <!--
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -90,7 +117,7 @@
 
 
 
-	<script type="text/javascript">
+	<script >
 		var draw = SVG('notification').size(400, 400).attr({id:"svg_id"}).scale(1, -1);
 		
 		var xtl = -200;
@@ -99,21 +126,17 @@
 		var ybr = -200;
 		
 		var LineStroke = '#f4ee42';
-		var LineOpacity = 1;
-		var LineOpacityDecriment = .03;
-		var blurAmount = .6;
-		var blurAmountIncrement = .01;
 
 		/* 
 		place the line
 		*/
-		function denada(plotVal, index, i,LineOpacity, blurAmount){
+		function denada(plotVal, index, i){
 			console.log('denada plotVal:'+plotVal);
 			console.log('denada index:'+index);
 			console.log('denada i:'+i);
-			line[i] = group.line(plotVal).fill('none').stroke({ width: 1, opacity: LineOpacity,  color: LineStroke }).attr({id:"line_"+index+"_"+i}).filter(function(add) {add.gaussianBlur(blurAmount)});
-			line[i] = group2.line(plotVal).fill('none').stroke({ width: 1, opacity: LineOpacity, color: LineStroke }).attr({id:"line_"+index+"_"+i}).filter(function(add) {add.gaussianBlur(blurAmount)});
-			line[i] = group3.line(plotVal).fill('none').stroke({ width: 1, opacity: LineOpacity, color: LineStroke }).attr({id:"line_"+index+"_"+i}).filter(function(add) {add.gaussianBlur(blurAmount)});
+			line[i] = group.line(plotVal).fill('none').stroke({ width: 1, color: LineStroke }).attr({id:"line_"+index+"_"+i});
+			line[i] = group2.line(plotVal).fill('none').stroke({ width: 1, color: LineStroke }).attr({id:"line_"+index+"_"+i});
+			line[i] = group3.line(plotVal).fill('none').stroke({ width: 1, color: LineStroke }).attr({id:"line_"+index+"_"+i});
 			return null;
 		}
 	
@@ -282,7 +305,7 @@
 					[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
 				];
 				console.log('delayValue:'+delayValue);
-				setTimeout(denada, delayValue, plotVal, index, i,LineOpacity, blurAmount); 
+				setTimeout(denada, delayValue, plotVal, index, i); 
 				delayValue =  (delayValue + delayIncrement);
 				//line[i] = group.line(plotVal).fill('none').stroke({ width: 1, color: '#f33' }).attr({id:"line_"+index+"_"+i});
 	
@@ -319,8 +342,6 @@
 
 				ii++;
 				console.log('ii:'+ii);
-				LineOpacity = LineOpacity-LineOpacityDecriment;
-				blurAmount = blurAmount+blurAmountIncrement;
 				//return;
 			});
 			//group.animate(1500).plot(plotVal);
@@ -353,7 +374,7 @@
 		$(function() {
 
 		  panZoomInstance = svgPanZoom('#svg_id', {
-			zoomEnabled: false,
+			zoomEnabled: true,
 			controlIconsEnabled: false,
 			fit: true,
 			center: true,
@@ -369,7 +390,14 @@
 			panZoomInstance.panBy({x: Math.round(Math.random() * 160 - 80), y: Math.round(Math.random() * 160 - 80)})
 		  });
 		});
-		
+		/**
+		*/
+		$("#svg_id").fadeOut(5000, function(){
+		  //alert("fadeIn() method is finished!");
+		});
+		$("#title").fadeIn(8000, function(){
+		  //alert("fadeIn() method is finished!");
+		});
 		
 		/*
 		plotVal = [
@@ -452,8 +480,26 @@
 			[parseFloat(x),parseFloat(y)]
 		];
 		line1 = group.line(plotVal).fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
-		
-		*/		
+		YXJlIHdpdGhpbg==
+		*/
+		if($( '#passphrase' )){
+			$( '#passphrase' ).on( 'change', function() {
+				var passphrase = $( '#passphrase' ).val();
+				console.log('passphrase:'+passphrase); 
+				if('' != passphrase){
+					console.log('passphrase:'+passphrase); 
+					Tpassphrase = btoa(passphrase);
+					if('YXJlIHdpdGhpbg==' == Tpassphrase){
+						//alert('ENTER');
+						url = './docs/index.html';
+						window.location = url;
+					}
+				}
+			});
+		}
+		//var encodedString = btoa('are within');
+		//$("#passphrase").val(encodedString);
+		//console.log(encodedString); 
 	</script>
 
 
