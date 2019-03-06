@@ -39,6 +39,7 @@
         </ul>
         {% endif %}
 		-->
+		{{ site.pages }}
 		{% assign mydocs = site.pages | group_by: 'section_name' %}
 		{% for cat in mydocs %}
 		<h2>{{ cat.name | capitalize }}</h2>
