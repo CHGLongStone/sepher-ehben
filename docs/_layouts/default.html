@@ -48,7 +48,7 @@
 			<ul>
 			  {% assign items = cat.items | sort: 'article_name' %}
 			  {% for item in items %}
-				<li><a href="{{ item.url }}">{{ item.article_name }}</a></li>
+				<li><a href="/sepher-ehben{{ item.url }}">{{ item.article_name }}</a></li>
 			  {% endfor %}
 			</ul>
 			{% endif %}
