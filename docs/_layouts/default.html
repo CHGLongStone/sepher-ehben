@@ -40,23 +40,45 @@
           <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
         </ul>
         {% endif %}
+
+		<h2>Origins</h2>
+		<ul>
+		{% for post_name in site.Origins %}
+			  <li><a href="{{ post_name.url }}">{{ post_name.url }}</a></li>
+		{% endfor %}
+		</ul>
+		<h2>Aphorisms</h2>
+		<ul>
+		{% for post_name in site.Aphorisms %}
+			  <li><a href="{{ post_name.url }}">{{ post_name.url }}</a></li>
+		{% endfor %}
+		</ul>
+		<h2>Hymns to the Logos</h2>
+		<ul>
+		{% for post_name in site.Hymns_to_the_Logos %}
+			  <li><a href="{{ post_name.url }}">{{ post_name.url }}</a></li>
+		{% endfor %}
+		</ul>
+		<h2>Reveries</h2>
+		<ul>
+		{% for post_name in site.Reveries %}
+			  <li><a href="{{ post_name.url }}">{{ post_name.url }}</a></li>
+		{% endfor %}
+		</ul>
+		<h2>Practice</h2>
+		<ul>
+		{% for post_name in site.Practice %}
+			  <li><a href="{{ post_name.url }}">{{ post_name.url }}</a></li>
+		{% endfor %}
+		</ul>
+		
+		
 		<h2> site.pages </h2>
 		<ul>
 		   {% for page in site.pages %}
 			  <li><a href="{{ page.url }}">{{ page.name }}</a></li>
 		   {% endfor %}
 		</ul>
-		<h2> site.collections </h2>
-			  
-		   {% for item in site.collections %}
-			  {{ item.label }}
-		   {% endfor %}
-		   Origins
-		
-		{% for post_name in site.Origins %}
-			  <li><a href="{{ post_name.url }}">{{ post_name.url }}</a></li>
-		{% endfor %}
-
       </header>
       <section>
 
