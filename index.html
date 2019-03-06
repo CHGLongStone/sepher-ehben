@@ -14,30 +14,57 @@
 
 	body {
 	  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background: #555 url(assets/images/transparent_isometric_cube.svg) no-repeat center top scroll;
-	/* box-shadow: 0 5px 5px 0 rgba(0,0,0,.75); */
+	  background: #000;
+	/* 
+	background: #555 url(assets/images/background2.png) no-repeat center top scroll;
+	box-shadow: 0 5px 5px 0 rgba(0,0,0,.75); 
+		position: absolute;
+	*/
 	-webkit-transition: none;
 	transition: none;
 	
 		
-		position: absolute;
+		/*
+		*/
 		left: 0;
-		top: 10%;
+		top: 0;
 		width: 100%;
 		text-align: center;
 		font-size: 18px;	  
 	}
 
+	input {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		background: #333;
+		color: #f4ee42;
+		border-width: 0px;
+		font-size: 18px;
+	}
 	.section {
 		
 	}
 	.title {
 		 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		 color: #f4ee42;
+		 position: relative;
+		 left: center;
+		 display:none;
+		 /*
+		 padding-
+		 */
+		 top: 200px;
+	}
+	.overlay {
+		background: #000 url(assets/images/background4.png) no-repeat center top scroll;
+		height: 600;
+		padding-top: 0px
+		 
 	}
 	svg {
 		width: 500;
 		height: 500;
+			 position: relative;
+		top: -100px;
 	}
 
 	path.slice{
@@ -56,12 +83,17 @@
 </head>
 <body>
 
-				<div id="notification" name="notification" class="form-group">
-				</div>
-				<div class="title">
-					He appeared to me in flash<br> 
-					and thunder, <br> 
-					I am but a stone before him<br> 
+				<div id="notification" name="notification" class="overlay">
+					<div class="title" id="title">
+						He appeared to me in flash<br> 
+						and thunder, <br> 
+						I am but a stone before him<br> 
+						<br> 
+						From Temugin to Tenzin<br> 
+						the only true battles...<br> 
+						<br> 
+						<input type="text" name="passphrase" id="passphrase"><br> 
+					</div>
 				</div>
 <!--
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -358,7 +390,14 @@
 			panZoomInstance.panBy({x: Math.round(Math.random() * 160 - 80), y: Math.round(Math.random() * 160 - 80)})
 		  });
 		});
-		
+		/**
+		*/
+		$("#svg_id").fadeOut(5000, function(){
+		  //alert("fadeIn() method is finished!");
+		});
+		$("#title").fadeIn(8000, function(){
+		  //alert("fadeIn() method is finished!");
+		});
 		
 		/*
 		plotVal = [
@@ -441,8 +480,26 @@
 			[parseFloat(x),parseFloat(y)]
 		];
 		line1 = group.line(plotVal).fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
-		
-		*/		
+		YXJlIHdpdGhpbg==
+		*/
+		if($( '#passphrase' )){
+			$( '#passphrase' ).on( 'change', function() {
+				var passphrase = $( '#passphrase' ).val();
+				console.log('passphrase:'+passphrase); 
+				if('' != passphrase){
+					console.log('passphrase:'+passphrase); 
+					Tpassphrase = btoa(passphrase);
+					if('YXJlIHdpdGhpbg==' == Tpassphrase){
+						//alert('ENTER');
+						url = './docs/index.html';
+						window.location = url;
+					}
+				}
+			});
+		}
+		//var encodedString = btoa('are within');
+		//$("#passphrase").val(encodedString);
+		//console.log(encodedString); 
 	</script>
 
 
