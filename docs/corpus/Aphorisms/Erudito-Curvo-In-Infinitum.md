@@ -12,6 +12,16 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-aphorisms-erudito-curvo-in-infinitum-d761319be232
 ---
 
+# Sepher Ehben: Aphorisms — Erudito Curvo In Infinitum
+
+The greater one’s inate capacity for personal development the greater challenges they will face on their life path in order to precipitate…
+
 The greater one’s inate capacity for personal development the greater challenges they will face on their life path in order to precipitate that growth.
 
 Lessons are always presented when they have the greatest capacity to teach.the lesson will be replayed at the level of sophistication best suited to convey the point.
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [July 23, 2018](https://medium.com/p/d761319be232).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-aphorisms-erudito-curvo-in-infinitum-d761319be232)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

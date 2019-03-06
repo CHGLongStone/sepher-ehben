@@ -11,6 +11,10 @@ date_dsp: '16:59:49.464Z'
 source: 'https://medium.com//@jasonmedland/sepher-ehben-the-book-of-stone-a9932388b533'
 ---
 
+# Sepher Ehben: Origins — The Book of Stone
+
+You don’t need to be a Saint or a Bodhisattva to make a difference in the world, acting with personal integrity is the most meaningful act
+
 ![](https://cdn-images-1.medium.com/max/800/1*V1amqCE1tzcLDaqEvNafSQ.jpeg)
 
 #### Where to start such a journey…
@@ -47,3 +51,9 @@ You don’t need to be a Saint or a Bodhisattva to make a difference in the worl
 #### What is worthy of being written in stone?
 
 The things that can truly enlighten us to our selves, our societies and subcultures, our biologically evolutionary beings and our places within that multidimensional substrate.
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [October 18, 2018](https://medium.com/p/a9932388b533).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-the-book-of-stone-a9932388b533)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

@@ -12,6 +12,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-reveries-longstone-dispersal-8767b40e7d5e
 ---
 
+# Sepher Ehben: Reveries — LongStone — Dispersal
+
+Early explorations of mysticism. There are seeds of things that withstood the crucible of time and there are other things that are a…
+
 The pamphlet “Dispersal” V3 was prepared to accompany a presentation at the inaugural Subtle Technologies Conference ([program here](https://www.facebook.com/jason.medland/media_set?set=a.10153174963666892&type=3))
 
 ![](https://cdn-images-1.medium.com/max/800/1*as0FiicDsNeDdQfDp_1KvA.jpeg)
@@ -57,3 +61,9 @@ Circling back to emergence
 ![](https://cdn-images-1.medium.com/max/800/1*CjDmwn7NKusFvfUx347uPg.jpeg)
 
 Do I sin if my aim is mean? Will the mode of my habituation constrain the medians in the lane of my experience?
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [October 17, 2018](https://medium.com/p/8767b40e7d5e).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-reveries-longstone-dispersal-8767b40e7d5e)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

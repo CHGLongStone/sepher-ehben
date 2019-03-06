@@ -10,6 +10,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-hymns-to-the-logos-cold-open-ignition-68e7955486b1
 ---
 
+# Sepher Ehben: Hymns to the Logos — Cold Open Ignition
+
+I’m here to ignite you, incite you  In your passion for critical analysis  A dialysis for your cognitive engagement  But I’ve got way more…
+
 ![](https://cdn-images-1.medium.com/max/800/1*qNJ4Ap9ag0UwVNMwbZTfJQ.png)
 
 [https://m.alexgrey.com/art/paintings/soul/alex\_grey\_holy\_fire\_panel\_1/](https://m.alexgrey.com/art/paintings/soul/alex_grey_holy_fire_panel_1/)
@@ -78,3 +82,9 @@ So I know when to shut the fuck up 
 And listen … maybe I’m not done
 
 But my 3 minutes are up…
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [December 4, 2018](https://medium.com/p/68e7955486b1).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-hymns-to-the-logos-cold-open-ignition-68e7955486b1)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

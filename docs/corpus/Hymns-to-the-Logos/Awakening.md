@@ -12,6 +12,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-hymns-to-the-logos-awakening-533df9dddfdd
 ---
 
+# Sepher Ehben: Hymns to the Logos — Awakening
+
+A point of true realization is something you can't turn away from without inviting karmic peril. The realization is indelible no matter how…
+
 ![](https://cdn-images-1.medium.com/max/800/1*wUSQAE_HkX50TnbdhP07WQ.jpeg)
 
 Dancing Shaman: “open and receptive”. Soapstone, Beach pebble, rodent bones, locust thorns.
@@ -23,3 +27,9 @@ A point of true realization is something you can't turn away from without inviti
 Dancing Shaman: “ecstatic fire”.
 
 You are not an oyster, calcifying this discomfort will produce nothing of beauty only the accretion of misery until the fire in your head and in your belly can burn not just the dead wood but the ossified habituations that trap you inside yourself.
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [July 6, 2018](https://medium.com/p/533df9dddfdd).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-hymns-to-the-logos-awakening-533df9dddfdd)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

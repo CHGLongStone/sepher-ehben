@@ -13,6 +13,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-reveries-longstone-ideology-choose-your-poison-b602e6ba4365
 ---
 
+# Sepher Ehben: Reveries — Longstone — Ideology, Choose your Poison…
+
+I have to admit I’m thoroughly disgusted when I hear someone use a phrase like “every ideology deserves a place at the table”. Every…
+
 If the statement offends you it is simply an indication of the depth of your indoctrination or your misapprehension of my language. I am responsible for what I say, not for what you understand. I am not drawing a line in the sand with with a sweep of the foot, I am laying it grain by grain with the attention of Tenzin creating a mandala.
 
 #### Ideology is a failed state of consciousness.
@@ -65,3 +69,9 @@ The problems we face aren’t seesaws or tug of war and the playground conceptua
 
 [**Theologue - Alex Grey**  
 _The Union of Human and Divine Consciousness Weaving the Fabric of Space and Time In Which the Self and Its Surroundings…_www.alexgrey.com](https://www.alexgrey.com/art/paintings/soul/alex_grey_theologue-2/ "https://www.alexgrey.com/art/paintings/soul/alex_grey_theologue-2/")[](https://www.alexgrey.com/art/paintings/soul/alex_grey_theologue-2/)
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [October 17, 2018](https://medium.com/p/b602e6ba4365).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-reveries-longstone-ideology-choose-your-poison-b602e6ba4365)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

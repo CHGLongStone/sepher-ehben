@@ -12,6 +12,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-hymns-to-the-logos-entheogenisis-ca9222892156
 ---
 
+# Sepher Ehben: Hymns to the Logos — Entheogenisis
+
+In the beginning was the word And the word was with the Logos And the word was the Logos The generative construct that impregnates the…
+
 ![](https://cdn-images-1.medium.com/max/600/1*7FaMFvMy_6rWQinxw0R3nw.png)
 
 In the beginning was the word  
@@ -68,3 +72,9 @@ To generate the maps of meaning of YOUR OWN existence
 
 [**DMT and the Bible: An Interview with Rick Strassman - Reality Sandwich**  
 _I was 20 years old one summer day in 1972, watching the sun set from my dorm room, when I vowed to do psychedelic drug…_realitysandwich.com](http://realitysandwich.com/231028/interview-rick-strassman/ "http://realitysandwich.com/231028/interview-rick-strassman/")[](http://realitysandwich.com/231028/interview-rick-strassman/)
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [July 30, 2018](https://medium.com/p/ca9222892156).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-hymns-to-the-logos-entheogenisis-ca9222892156)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

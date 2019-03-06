@@ -15,6 +15,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-reveries-longstone-openciv-the-requirements-of-responsible-citizenship-b34f416efb4a
 ---
 
+# Sepher Ehben: Reveries — Longstone — #OpenCiv the requirements of responsible citizenship.
+
+Becoming masterful at any given skill requires at least 10,000 hours, 5 years of 8 hour work days, 2 weeks vacation per year. This is not…
+
 ![](https://cdn-images-1.medium.com/max/800/1*n1BwUBHns3MMQBQO5TspXQ.jpeg)
 
 [https://www.alexgrey.com/praying/](https://www.alexgrey.com/praying/)
@@ -38,3 +42,9 @@ Less than 1/4 of any given sample group on any given skill will have a functiona
 The fundamental failure causing the discrepancy is a lack of metacognition leading to a lack of ability to process new information effectively when beyond the thresholds of personal bias. Be able to do what you say you can do and fully accept the consequences of your failures.
 
 People with genuine mastery over themselves will not be pretentious, or egotistical but they may be very passionate, without a passion for excellence you cannot effectively strive for mastery over self. They may seldom offer information unless they feel it is required but they will be forthcoming to anyone genuinely seeking knowledge.
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [December 10, 2018](https://medium.com/p/b34f416efb4a).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-reveries-longstone-openciv-the-requirements-of-responsible-citizenship-b34f416efb4a)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

@@ -10,6 +10,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-reveries-longstone-axiom-constructs-fa97dcfebf01
 ---
 
+# Sepher Ehben: Reveries — Longstone — Axiom Constructs
+
+Spinner Symmetry as an Analogue of Cognitive Constructs
+
 relevant section 43:56–1:10:15
 
 When Eric Weinstein introduced gauge theory and spinner (720 degree) symmetry it seemed like a good segue to talk about “complex geometries” in cognition.
@@ -37,3 +41,9 @@ Small increases in process efficacy can yield significant results even when leve
 Increasing the resolution of your personal situational awareness from lists and check boxes to schematic topologies is the first stage in coming to terms with the complexity of the challenges we face in order to engage more effective trust models in our interpersonal interactions.
 
 ![](https://cdn-images-1.medium.com/max/800/1*Pl2r4EiYdKZnho8fO-WClg.png)
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [November 27, 2018](https://medium.com/p/fa97dcfebf01).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-reveries-longstone-axiom-constructs-fa97dcfebf01)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

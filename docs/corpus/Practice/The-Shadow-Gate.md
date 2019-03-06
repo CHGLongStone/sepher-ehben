@@ -9,6 +9,10 @@ date_dsp: '19:06:14.769Z'
 source: 'https://medium.com//@jasonmedland/sepher-ehben-the-shadow-gate-b51cb14eee6b'
 ---
 
+# Sepher Ehben: Practice — The Shadow Gate
+
+A Psychological and Musical Journey in 3 parts
+
 ![](https://cdn-images-1.medium.com/max/800/1*r7B4ksrBU_IKNQmgo9kohA.jpeg)
 
 ### It matters not that you hear the music, you must feel in your chest to shake your being free of the dross and the deadwood.
@@ -62,3 +66,9 @@ You will NEVER see the beauty in the hurricane’s eye when you shelter from the
 The heuristic, is only intrinsic, at a refned degree of magnification or resolution.
 
 Your diamond days are cut and dry.
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [September 17, 2018](https://medium.com/p/b51cb14eee6b).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-the-shadow-gate-b51cb14eee6b)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

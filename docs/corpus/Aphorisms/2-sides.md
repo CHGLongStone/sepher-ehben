@@ -9,6 +9,10 @@ date_dsp: '00:33:26.260Z'
 source: 'https://medium.com//@jasonmedland/sepher-ehben-aphorisims-2-sides-3cced84bdbef'
 ---
 
+# Sepher Ehben: Aphorisims — 2 sides
+
+I don’t even remember what the original discussion was  Or who it was with Only that it was engaged but not heated  Until it was…
+
 I don’t even remember what the original discussion was   
 Or who it was with  
 Only that it was engaged but not heated   
@@ -43,3 +47,9 @@ Until nothing but that single phrase mantra remains
 Alahu Akbar   
 Praise Jesus  
 Patriarchy…
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [December 5, 2018](https://medium.com/p/3cced84bdbef).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-aphorisims-2-sides-3cced84bdbef)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

@@ -13,6 +13,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-chavurah-a-deliniation-of-sacred-space-76d2c5bbe37a
 ---
 
+# Sepher Ehben: Practice — Chavurah —  a Deliniation of Sacred Space
+
+Chavurah: in the social sense it is a companionship on the journey into the shadows of the inner self, it is the place one brings the ore…
+
 ### The Sentinel
 
 ![](https://cdn-images-1.medium.com/max/800/1*ikoVJoLyulDqvDQNvQswyg.jpeg)
@@ -102,3 +106,9 @@ In each round each Living Sentinel will address the domain from the frame of the
 In a basic Chavurah the Living Sentinel should stand in the center, in a communal Chavurah a Living Sentinel should stand in the triangle in front of their Sentinel.
 
 The central triangle of a communal Chavurah should not be occupied by a Living Sentinel during the Crucible.
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [November 12, 2018](https://medium.com/p/76d2c5bbe37a).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-chavurah-a-deliniation-of-sacred-space-76d2c5bbe37a)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

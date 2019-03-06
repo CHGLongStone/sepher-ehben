@@ -11,6 +11,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-reveries-longstone-how-to-identify-an-asshole-27fd479aef8d
 ---
 
+# Sepher Ehben: Reveries — Longstone — How to identify an asshole
+
+How to identify an asshole First we need to define our boundaries  Since we’re looking at a list we need some  Quantitative and…
+
 How to identify an asshole  
 First we need to define our boundaries   
 Since we’re looking at a list we need some   
@@ -22,3 +26,9 @@ an asshole is “someone who gets upset 
 If you treat them, the same way they treat you”  
 I like the definition because it touches both   
 The hypocrisy and the underlying abusiveness
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [December 10, 2018](https://medium.com/p/27fd479aef8d).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-reveries-longstone-how-to-identify-an-asshole-27fd479aef8d)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

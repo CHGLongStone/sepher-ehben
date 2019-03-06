@@ -11,6 +11,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-reveries-%D7%99%D7%A2%D7%A7%D7%91-%D7%A4%D7%98%D7%95%D7%A8%D7%94%D7%A6%D7%99-a-certain-formality-ade1154147a
 ---
 
+# Sepher Ehben: Reveries — יעקב פטורהצ’י — A Certain Formality
+
+re-posted with permission from author
+
 **re-posted with permission from author**
 
 Those who know me best know me to be a formalist. I believe in processes. I believe in collaborative and cumulative human progress. I believe that proper categorization, modification, renovation, and winnowing is fundamental to human existence. I believe this not only as a historical, pragmatic and logical consequence of the human condition. It is the religious and mystical foundation of [birur](https://l.facebook.com/l.php?u=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTohu_and_Tikun&h=AT3erqMOl1xe6c67-gNMbXOjDJcZODwUlHZLYCCh9hRQuh1evweDifDW__ZGJGvwENkoe50tJ9bwnvyfOEvjuMUCpNlbQuzg7Hov3_QS5APNbATLF-o0f2ZYrw81pkUA7-bJwQVmBigdayeRvyC_) which underlies the Jewish concept of Creation and Salvation.
@@ -44,3 +48,9 @@ This is where our competence hierarchies have been corrupted and our sense-makin
 We no longer accept apologies. We no longer forgive mistakes. We no longer admit fault. We no longer value growth and humility. We no longer acknowledge that we are finite.
 
 _Originally published at_ [_www.facebook.com_](https://www.facebook.com/notes/%D7%99%D7%A2%D7%A7%D7%91-%D7%A4%D7%98%D7%95%D7%A8%D7%94%D7%A6%D7%99/a-certain-formality/2204847433135345/?hc_location=ufi)_._
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [November 29, 2018](https://medium.com/p/ade1154147a).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-reveries-%D7%99%D7%A2%D7%A7%D7%91-%D7%A4%D7%98%D7%95%D7%A8%D7%94%D7%A6%D7%99-a-certain-formality-ade1154147a)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

@@ -13,6 +13,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-hymns-to-the-logos-a-call-to-prayer-for-the-disaffected-9daeed8a2904
 ---
 
+# Sepher Ehben: Hymns to the Logos — A call to Prayer for the disaffected
+
+Political ideologues, intellectually un-deft, bereft of nuance and subtly, convinced of the Reich-ness of their dis-position. Gulags of…
+
 Political ideologues, intellectually un-deft,   
 bereft of nuance and subtly,   
 convinced of the Reich-ness   
@@ -180,3 +184,9 @@ faced by the prisoners of war 
 of these tin soldier battles  
 and bring some light   
 into the world
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [July 20, 2018](https://medium.com/p/9daeed8a2904).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-hymns-to-the-logos-a-call-to-prayer-for-the-disaffected-9daeed8a2904)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

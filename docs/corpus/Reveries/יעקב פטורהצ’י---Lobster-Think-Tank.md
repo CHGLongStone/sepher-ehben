@@ -11,6 +11,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-reveries-%D7%99%D7%A2%D7%A7%D7%91-%D7%A4%D7%98%D7%95%D7%A8%D7%94%D7%A6%D7%99-lobster-think-tank-b88d86e2d610
 ---
 
+# Sepher Ehben: Reveries — יעקב פטורהצ’י— Lobster Think Tank
+
+re-posted with permission from author
+
 **re-posted with permission from author**
 
 I have been thinking a lot about a particular disruption in our capacity to deliberate collectively that has been identified by intellectuals I find particularly compelling. (I previously wrote another [reflection](https://www.facebook.com/notes/%D7%99%D7%A2%D7%A7%D7%91-%D7%A4%D7%98%D7%95%D7%A8%D7%94%D7%A6%D7%99/a-certain-formality/2204847433135345/) on this issue.)
@@ -52,3 +56,9 @@ Competent, stable, redundant, able, agile, rewarding, capable, interactive, flex
 It’s just a start, but it starts me thinking that all those years of mediocre grades I got in Physical Education were far more consequential than I ever considered.
 
 _Originally published at_ [_www.facebook.com_](https://www.facebook.com/notes/%D7%99%D7%A2%D7%A7%D7%91-%D7%A4%D7%98%D7%95%D7%A8%D7%94%D7%A6%D7%99/lobster-think-tank/2236355489984539/?hc_location=ufi)_._
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [November 29, 2018](https://medium.com/p/b88d86e2d610).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-reveries-%D7%99%D7%A2%D7%A7%D7%91-%D7%A4%D7%98%D7%95%D7%A8%D7%94%D7%A6%D7%99-lobster-think-tank-b88d86e2d610)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

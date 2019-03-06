@@ -11,6 +11,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-reveries-longstone-a-cosmology-of-emergent-revelation-57c5665f94fd
 ---
 
+# Sepher Ehben: Reveries — Longstone — A Cosmology of Emergent Revelation
+
+WTFAQ does that mean?
+
 #### Emergence
 
 [**Emergence - Wikipedia**  
@@ -189,3 +193,9 @@ _In 1987, political scientist James Flynn of the University of Otago in New Zeal
 
 [**A Neuroscientist Explores the "Sanskrit Effect"**  
 _A hundred dhoti-clad young men sat cross-legged on the floor in facing rows, chatting amongst themselves. At a sign…_blogs.scientificamerican.com](https://blogs.scientificamerican.com/observations/a-neuroscientist-explores-the-sanskrit-effect/ "https://blogs.scientificamerican.com/observations/a-neuroscientist-explores-the-sanskrit-effect/")[](https://blogs.scientificamerican.com/observations/a-neuroscientist-explores-the-sanskrit-effect/)
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [October 19, 2018](https://medium.com/p/57c5665f94fd).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-reveries-longstone-a-cosmology-of-emergent-revelation-57c5665f94fd)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

@@ -11,6 +11,10 @@ date_dsp: '21:53:02.830Z'
 source: 'https://medium.com//@jasonmedland/sepher-ehben-aphorisms-tango-1bbf66e84183'
 ---
 
+# Sepher Ehben: Aphorisms — Tango
+
+Embody Ha Shem, Embrace Leviathan. When the Logos dances with the Shadow, the Shadow can not run errant. When the Logos leads the dance…
+
 ![](https://cdn-images-1.medium.com/max/800/1*48YtmvLhI7wxJgsqWoF2vw.png)
 
 Embody Ha Shem,   
@@ -34,3 +38,9 @@ with courage and face 
 the dark parts of yourself   
 before someone else   
 has to pay the consequences.
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [September 24, 2018](https://medium.com/p/1bbf66e84183).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-aphorisms-tango-1bbf66e84183)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.

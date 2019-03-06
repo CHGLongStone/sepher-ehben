@@ -12,6 +12,10 @@ source: >-
   https://medium.com//@jasonmedland/sepher-ehben-aphorisms-chosen-people-309fab75925a
 ---
 
+# Sepher Ehben: Aphorisms — Chosen People…
+
+Chosen? Chosen by what? The integrity and the extent To which you embody your covenant?
+
 Chosen?   
 Chosen by what?  
 The integrity and the extent   
@@ -50,3 +54,9 @@ A true crown is thorny
 With the responsibilities of stewardship.  
 A gilded brocade is worthless if it does not   
 Have any weight, again, take care to what you elevate.
+
+By [Jason Medland](https://medium.com/@jasonmedland) on [October 10, 2018](https://medium.com/p/309fab75925a).
+
+[Canonical link](https://medium.com/@jasonmedland/sepher-ehben-aphorisms-chosen-people-309fab75925a)
+
+Exported from [Medium](https://medium.com) on March 4, 2019.
