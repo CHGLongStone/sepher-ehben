@@ -5,3 +5,4 @@ plugins:
   - jekyll-sitemap
   - jekyll-titles-from-headings
 theme: jekyll-theme-minimal
+collections_dir: corpus
