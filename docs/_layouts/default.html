@@ -39,60 +39,66 @@
         </ul>
         {% endif %}
 		-->
-		{{ site.pages }}
+
 		{% assign mydocs = site.pages | group_by: 'section_name' %}
 		{% for cat in mydocs %}
-		<h2>{{ cat.name | capitalize }}</h2>
+			{% if cat.name == "Origins" %}
+			<h2>{{ cat.name | capitalize }}</h2>
 			<ul>
 			  {% assign items = cat.items | sort: 'article_name' %}
 			  {% for item in items %}
 				<li><a href="{{ item.url }}">{{ item.article_name }}</a></li>
 			  {% endfor %}
 			</ul>
+			{% endif %}
 		{% endfor %}
+		
+		{% for cat in mydocs %}
+			{% if cat.name == "Aphorisms" %}
+			<h2>{{ cat.name | capitalize }}</h2>
+			<ul>
+			  {% assign items = cat.items | sort: 'article_name' %}
+			  {% for item in items %}
+				<li><a href="{{ item.url }}">{{ item.article_name }}</a></li>
+			  {% endfor %}
+			</ul>
+			{% endif %}
+		{% endfor %}
+		{% for cat in mydocs %}
+			{% if cat.name == "Hymns to the Logos" %}
+			<h2>{{ cat.name | capitalize }}</h2>
+			<ul>
+			  {% assign items = cat.items | sort: 'article_name' %}
+			  {% for item in items %}
+				<li><a href="{{ item.url }}">{{ item.article_name }}</a></li>
+			  {% endfor %}
+			</ul>
+			{% endif %}
+		{% endfor %}
+		{% for cat in mydocs %}
+			{% if cat.name == "Reveries" %}
+			<h2>{{ cat.name | capitalize }}</h2>
+			<ul>
+			  {% assign items = cat.items | sort: 'article_name' %}
+			  {% for item in items %}
+				<li><a href="{{ item.url }}">{{ item.article_name }}</a></li>
+			  {% endfor %}
+			</ul>
+			{% endif %}
+		{% endfor %}
+		{% for cat in mydocs %}
+			{% if cat.name == "Practice" %}
+			<h2>{{ cat.name | capitalize }}</h2>
+			<ul>
+			  {% assign items = cat.items | sort: 'article_name' %}
+			  {% for item in items %}
+				<li><a href="{{ item.url }}">{{ item.article_name }}</a></li>
+			  {% endfor %}
+			</ul>
+			{% endif %}
+		{% endfor %}
+		
 
-		<h2>Origins</h2>
-		<ul>
-		{% for post_name in site.Origins %}
-			  <li><a href="{{ post_name.url }}">{{ post_name.section_name }}</a></li>
-			  {{ post_name.relative_path }}
-			  {{ post_name.path }}
-			  {{ post_name.section_name }}
-			  {{ post_name.article_name }}
-		{% endfor %}
-		</ul>
-		<h2>Aphorisms</h2>
-		<ul>
-		{% for post_name in site.Aphorisms %}
-			  <li><a href="{{ post_name.url }}">{{ post_name.url }}</a></li>
-		{% endfor %}
-		</ul>
-		<h2>Hymns to the Logos</h2>
-		<ul>
-		{% for post_name in site.Hymns_to_the_Logos %}
-			  <li><a href="{{ post_name.url }}">{{ post_name.url }}</a></li>
-		{% endfor %}
-		</ul>
-		<h2>Reveries</h2>
-		<ul>
-		{% for post_name in site.Reveries %}
-			  <li><a href="{{ post_name.url }}">{{ post_name.url }}</a></li>
-		{% endfor %}
-		</ul>
-		<h2>Practice</h2>
-		<ul>
-		{% for post_name in site.Practice %}
-			  <li><a href="{{ post_name.url }}">{{ post_name.url }}</a></li>
-		{% endfor %}
-		</ul>
-		
-		
-		<h2> site.pages </h2>
-		<ul>
-		   {% for page in site.pages %}
-			  <li><a href="{{ page.url }}">{{ page.name }}</a></li>
-		   {% endfor %}
-		</ul>
       </header>
       <section>
 
