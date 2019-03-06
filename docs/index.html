@@ -398,7 +398,21 @@
 		$("#title").fadeIn(8000, function(){
 		  //alert("fadeIn() method is finished!");
 		});
-		
+		if($( '#passphrase' )){
+			$( '#passphrase' ).on( 'change', function() {
+				var passphrase = $( '#passphrase' ).val();
+				console.log('passphrase:'+passphrase); 
+				if('' != passphrase){
+					console.log('passphrase:'+passphrase); 
+					Tpassphrase = btoa(passphrase);
+					if('YXJlIHdpdGhpbg==' == Tpassphrase){
+						//alert('ENTER');
+						url = './home';
+						window.location = url;
+					}
+				}
+			});
+		}
 		/*
 		plotVal = [
 			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
@@ -482,21 +496,7 @@
 		line1 = group.line(plotVal).fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
 		YXJlIHdpdGhpbg==
 		*/
-		if($( '#passphrase' )){
-			$( '#passphrase' ).on( 'change', function() {
-				var passphrase = $( '#passphrase' ).val();
-				console.log('passphrase:'+passphrase); 
-				if('' != passphrase){
-					console.log('passphrase:'+passphrase); 
-					Tpassphrase = btoa(passphrase);
-					if('YXJlIHdpdGhpbg==' == Tpassphrase){
-						//alert('ENTER');
-						url = './home';
-						window.location = url;
-					}
-				}
-			});
-		}
+
 		//var encodedString = btoa('are within');
 		//$("#passphrase").val(encodedString);
 		//console.log(encodedString); 
