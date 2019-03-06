@@ -39,6 +39,16 @@
         </ul>
         {% endif %}
 		-->
+		{% assign mydocs = site.docs | group_by: 'section_name' %}
+		{% for cat in mydocs %}
+		<h2>{{ cat.name | capitalize }}</h2>
+			<ul>
+			  {% assign items = cat.items | sort: 'article_name' %}
+			  {% for item in items %}
+				<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+			  {% endfor %}
+			</ul>
+		{% endfor %}
 
 		<h2>Origins</h2>
 		<ul>
