@@ -40,11 +40,11 @@
 		<h2> site.pages </h2>
 		<ul>
 		   {% for page in site.pages %}
-			  {{ page }}
-			  <li><a href="{{ page.title }}">{{ page.name }}</a></li>
+			  <li><a href="{{ page.url }}">{{ page.name }}</a></li>
 		   {% endfor %}
 		</ul>
 		<h2> site.collections </h2>
+			  {{ site.collections }}
 		   {% for item in site.collections %}
 			  {{ item }}
 		   {% endfor %}
