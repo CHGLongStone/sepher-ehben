@@ -43,10 +43,11 @@
 		<h2>Origins</h2>
 		<ul>
 		{% for post_name in site.Origins %}
-			  <li><a href="{{ post_name.url }}">{{ post_name.short_name }}</a></li>
+			  <li><a href="{{ post_name.url }}">{{ post_name.section_name }}</a></li>
 			  {{ post_name.relative_path }}
 			  {{ post_name.path }}
-			  {{ post_name.relative_path }}
+			  {{ post_name.section_name }}
+			  {{ post_name.article_name }}
 		{% endfor %}
 		</ul>
 		<h2>Aphorisms</h2>
