@@ -48,6 +48,10 @@
 		   {% for item in site.collections %}
 			  {{ item }}
 		   {% endfor %}
+		{% for post_name in site.Origins %}
+			  <li><a href="{{ post_name.url }}">{{ page.post_name }}</a></li>
+		 
+		{% endfor %}
       </header>
       <section>
 
