@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Aphorisms — Gates of Wrath'
+short_name: Gates-of-Wrath
 description: >-
   Tread carefully approaching the gates of wrath if you are not balanced in your
   posture or cool and even in your temperament your touch will…

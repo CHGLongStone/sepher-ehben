@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Aphorisms — Yir’ah'
+short_name: Yir-ah
 description: >-
   “Fear of God” is not a moralistic fear of doing wrong and being caught.
   Neither is it the fear of a child waiting to be struck by vengeful…

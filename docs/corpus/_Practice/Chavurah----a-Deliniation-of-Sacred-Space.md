@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Practice — Chavurah —  a Deliniation of Sacred Space'
+short_name: Chavurah----a-Deliniation-of-Sacred-Space
 description: >-
   Chavurah: in the social sense it is a companionship on the journey into the
   shadows of the inner self, it is the place one brings the ore…

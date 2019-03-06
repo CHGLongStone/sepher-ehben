@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Hymns to the Logos — A call to Prayer for the disaffected'
+short_name: A-call-to-Prayer-for-the-disaffected
 description: >-
   Political ideologues, intellectually un-deft, bereft of nuance and subtly,
   convinced of the Reich-ness of their dis-position. Gulags of…

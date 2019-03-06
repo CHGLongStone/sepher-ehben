@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Practice — The Shadow Gate'
+short_name: The-Shadow-Gate
 description: A Psychological and Musical Journey in 3 parts
 date: '2018-09-17T19:06:14.769Z'
 categories: ''

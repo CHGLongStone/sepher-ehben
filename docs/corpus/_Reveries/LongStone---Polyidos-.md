@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Reveries — LongStone — Polyidos?'
+short_name: LongStone---Polyidos-
 description: "Polyidos or Poly-ID-10T\_…savant TBD,"
 date: '2018-10-03T06:36:37.957Z'
 categories: ''

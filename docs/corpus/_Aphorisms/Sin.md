@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Aphorisms — Sin'
+short_name: Sin
 description: >-
   Original sin, etymologically was an admonishment to mastery appropriate to the
   instruction of someone developing until it became a doctrine…

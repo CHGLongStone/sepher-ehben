@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Reveries — יעקב פטורהצ’י — A Certain Formality'
+short_name: יעקב פטורהצ’י---A-Certain-Formality
 description: re-posted with permission from author
 date: '2018-11-29T03:25:38.537Z'
 categories: ''

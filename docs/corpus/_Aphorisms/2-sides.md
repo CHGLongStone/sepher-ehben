@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Aphorisims — 2 sides'
+short_name: 2-sides
 description: "I don’t even remember what the original discussion was\_Or who it was withOnly that it was engaged but not heated\_Until it was…"
 date: '2018-12-05T00:33:26.260Z'
 categories: ''

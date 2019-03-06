@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Aphorisms — Erudito Curvo In Infinitum'
+short_name: Erudito-Curvo-In-Infinitum
 description: >-
   The greater one’s inate capacity for personal development the greater
   challenges they will face on their life path in order to precipitate…

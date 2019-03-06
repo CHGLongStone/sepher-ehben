@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Reveries — LongStone — Dispersal'
+short_name: LongStone---Dispersal
 description: >-
   Early explorations of mysticism. There are seeds of things that withstood the
   crucible of time and there are other things that are a…

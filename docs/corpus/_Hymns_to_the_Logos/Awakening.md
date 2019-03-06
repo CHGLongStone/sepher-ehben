@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Hymns to the Logos — Awakening'
+short_name: Awakening
 description: >-
   A point of true realization is something you can't turn away from without
   inviting karmic peril. The realization is indelible no matter how…

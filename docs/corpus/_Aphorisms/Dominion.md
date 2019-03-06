@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Aphorisms — Dominion'
+short_name: Dominion
 description: 'The Kingdom is within you, that is the reach and extant of your dominion'
 date: '2018-07-23T12:59:10.166Z'
 categories: ''

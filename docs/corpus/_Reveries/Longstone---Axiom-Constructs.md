@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Reveries — Longstone — Axiom Constructs'
+short_name: Longstone---Axiom-Constructs
 description: Spinner Symmetry as an Analogue of Cognitive Constructs
 date: '2018-11-27T17:28:27.598Z'
 categories: ''

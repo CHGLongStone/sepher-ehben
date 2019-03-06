@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Hymns to the Logos — Entheogenisis'
+short_name: Entheogenisis
 description: >-
   In the beginning was the wordAnd the word was with the LogosAnd the word was
   the LogosThe generative construct that impregnates the…

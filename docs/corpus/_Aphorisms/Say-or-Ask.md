@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Aphorisms- Say or Ask'
+short_name: Say-or-Ask
 description: >-
   When you look at the person you have bonded with, say to them 3 things every
   day.

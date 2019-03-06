@@ -1,5 +1,6 @@
 ---
 title: 'Sepher Ehben: Reveries — LongStone — A Mustard Seed of Misdirection'
+short_name: LongStone---A-Mustard-Seed-of-Misdirection
 description: Jordan Peterson quoted…
 date: '2018-10-03T06:59:51.766Z'
 categories: ''
