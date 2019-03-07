@@ -4,9 +4,9 @@
 
 ## Aphorisms
 
-*   [2-sides](/sepher-ehben/corpus/Aphorisms/2-sides.html)
-*   [Asymptote](/sepher-ehben/corpus/Aphorisms/Asymptote.html)
-*   [Chosen-People-](/sepher-ehben/corpus/Aphorisms/Chosen-People-.html)
+*   [2-sides](../../../sepher-ehben/corpus/Aphorisms/2-sides.html)
+*   [Asymptote](../../sepher-ehben/corpus/Aphorisms/Asymptote.html)
+*   [Chosen-People-](../sepher-ehben/corpus/Aphorisms/Chosen-People-.html)
 *   [Dominion](/sepher-ehben/corpus/Aphorisms/Dominion.html)
 *   [Erudito-Curvo-In-Infinitum](/sepher-ehben/corpus/Aphorisms/Erudito-Curvo-In-Infinitum.html)
 *   [Framing-Perspective](/sepher-ehben/corpus/Aphorisms/Framing-Perspective.html)
