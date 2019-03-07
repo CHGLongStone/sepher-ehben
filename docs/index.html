@@ -398,6 +398,11 @@
 		$("#title").fadeIn(8000, function(){
 		  //alert("fadeIn() method is finished!");
 		});
+		
+		/**
+		* the barrier is trivial 
+		* yet you take the easy way out
+		*/
 		if($( '#passphrase' )){
 			$( '#passphrase' ).on( 'change', function() {
 				var passphrase = $( '#passphrase' ).val();
@@ -407,99 +412,13 @@
 					Tpassphrase = btoa(passphrase);
 					if('YXJlIHdpdGhpbg==' == Tpassphrase){
 						//alert('ENTER');
-						url = './home';
+						url = './corpus/Origins/The-Book-of-Stone.html';
 						window.location = url;
 					}
 				}
 			});
 		}
-		/*
-		plotVal = [
-			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
-			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
-		];
-		group.line(plotVal).fill('none').stroke({ width: 1, color: '#080' }).attr({id:"line_FFS"});
 
-		var RadianAngle = (baseShape.lines.A.angle * Math.PI / 180);
-		coords = {
-			"x1": 0,
-			"y1": 0,
-			"x2": (baseShape.short * Math.cos(RadianAngle)) + coords.x1,
-			"y2": (baseShape.short * Math.sin(RadianAngle)) + coords.y1,
-		};
-		plotVal = [
-			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
-			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
-		];
-		console.log("coords:"+JSON.stringify(coords, null, 2));
-		//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
-		group.line(plotVal).fill('none').stroke({ width: 1, color: '#006' }).attr({id:"line_FFS_01"});
-		
-		//-----------------------------------------------
-		var RadianAngle = (baseShape.lines.B.angle * Math.PI / 180);
-		coords = {
-			"x1": coords.x2,
-			"y1": coords.y2,
-			"x2": (baseShape.long * Math.cos(RadianAngle)) + coords.x2,
-			"y2": (baseShape.long * Math.sin(RadianAngle)) + coords.y2,
-		};
-		plotVal = [
-			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
-			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
-		];
-		console.log("coords:"+JSON.stringify(coords, null, 2));
-		//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
-
-		group.line(plotVal).fill('none').stroke({ width: 1, color: '#008' }).attr({id:"line_FFS_02"});
-		
-		//-----------------------------------------------
-		var RadianAngle = (baseShape.lines.C.angle * Math.PI / 180);
-		coords = {
-			"x1": coords.x2,
-			"y1": coords.y2,
-			"x2": (baseShape.long * Math.cos(RadianAngle)) + coords.x2,
-			"y2": (baseShape.long * Math.sin(RadianAngle)) + coords.y2,
-		};
-		plotVal = [
-			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
-			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
-		];
-		console.log("coords:"+JSON.stringify(coords, null, 2));
-		//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
-
-		group.line(plotVal).fill('none').stroke({ width: 1, color: '#00a' }).attr({id:"line_FFS_03"});
-		
-		//-----------------------------------------------
-		var RadianAngle = (baseShape.lines.D.angle * Math.PI / 180);
-		coords = {
-			"x1": coords.x2,
-			"y1": coords.y2,
-			"x2": (baseShape.short * Math.cos(RadianAngle)) + coords.x2,
-			"y2": (baseShape.short * Math.sin(RadianAngle)) + coords.y2,
-		};
-		plotVal = [
-			[coords.x1+Math.abs(xtl),coords.y1+Math.abs(ytl)], 
-			[coords.x2+Math.abs(xtl),coords.y2+Math.abs(ytl)]
-		];
-		console.log("coords:"+JSON.stringify(coords, null, 2));
-		//console.log("plotVal:"+JSON.stringify(plotVal, null, 2));
-
-		group.line(plotVal).fill('none').stroke({ width: 1, color: '#00a' }).attr({id:"line_FFS_04"});
-		
-		
-		
-		
-		plotVal = [
-			[parseFloat(lastPosition.x),parseFloat(lastPosition.y)], 
-			[parseFloat(x),parseFloat(y)]
-		];
-		line1 = group.line(plotVal).fill('none').stroke({ width: 1, color: '#333' }).attr({id:"line_"+index+"_"+i});
-		YXJlIHdpdGhpbg==
-		*/
-
-		//var encodedString = btoa('are within');
-		//$("#passphrase").val(encodedString);
-		//console.log(encodedString); 
 	</script>
 
 

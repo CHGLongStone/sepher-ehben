@@ -43,7 +43,6 @@
 		{% assign mydocs = site.pages | group_by: 'section_name' %}
 		{% for cat in mydocs %}
 			{% if cat.name == "Origins" %}
-			{{ cat }}
 			<h2>{{ cat.name | capitalize }}</h2>
 			<ul>
 			  {% assign items = cat.items | sort: 'article_name' %}
