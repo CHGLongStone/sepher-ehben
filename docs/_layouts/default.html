@@ -65,7 +65,7 @@
 			{% endif %}
 		{% endfor %}
 		{% for cat in mydocs %}
-			{% if cat.name == "Hymns to the Logos" %}
+			{% if cat.name == "Hymns-to-the-Logos" %}
 			<h2>{{ cat.name | capitalize }}</h2>
 			<ul>
 			  {% assign items = cat.items | sort: 'article_name' %}
