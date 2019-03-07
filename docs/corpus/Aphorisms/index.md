@@ -1,3 +1,4 @@
+		{% assign mydocs = site.pages | group_by: 'section_name' %}
 		{% for cat in mydocs %}
 			{% if cat.name == "Aphorisms" %}
 			<h2>{{ cat.name | capitalize }}</h2>
