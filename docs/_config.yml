@@ -1,8 +1,8 @@
 title: Sepher Ehben
+url: "https://chglongstone.github.io/sepher-ehben"
 logo: /assets/images/logo.jpg
 description: What in the Human Condition is worthy of being written in stone? A personal emergent journey into the esoteric made Open Source
 plugins:
   - jekyll-sitemap
-
 theme: jekyll-theme-minimal
 
